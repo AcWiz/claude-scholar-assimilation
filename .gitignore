@@ -26,3 +26,19 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+
+# Project-level ignores
+projects/*/data/raw/*
+!projects/*/data/raw/.gitkeep
+projects/*/outputs/experiments/*
+!projects/*/outputs/experiments/.gitkeep
+projects/*/outputs/checkpoints/*
+!projects/*/outputs/checkpoints/.gitkeep
+projects/*/outputs/logs/*
+!projects/*/outputs/logs/.gitkeep
+projects/*/.env
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors

@@ -108,6 +108,102 @@
 
 ---
 
+## 使用模式
+
+### 模式 A：单仓库多项目（推荐日常使用）
+
+在 `projects/` 目录下管理多个研究项目，共享 agent、命令和知识库：
+
+```
+my-claude-scholar/
+├── projects/
+│   ├── _template/              # 项目模板
+│   ├── transformer-interp/     # 研究 A：ICLR 投稿
+│   ├── llm-reasoning/          # 研究 B：NeurIPS 投稿
+│   └── graduation-thesis/      # 毕业论文
+├── .claude/                    # 共享 agent 和命令
+├── team/                       # 共享 agent 记忆
+└── knowledge/                  # 共享知识库
+```
+
+**优势**：agent 记忆跨项目积累；知识库和命令统一维护；单一仓库管理。
+
+**使用 `/new-project` 命令**创建新项目。
+
+### 模式 B：Clone 独立仓库（推荐重大研究）
+
+将 my-claude-scholar 作为模板，clone 为独立仓库：
+
+```bash
+git clone https://github.com/Gdnaiteab/my-claude-scholar.git my-iclr-paper
+cd my-iclr-paper
+git remote set-url origin https://github.com/yourname/my-iclr-paper.git
+```
+
+**优势**：完全隔离；可针对性定制 agent（如毕业论文需要调整格式规范）；独立 git 历史。
+
+**同步上游改进**：
+```bash
+git remote add upstream https://github.com/Gdnaiteab/my-claude-scholar.git
+git fetch upstream && git merge upstream/master
+```
+
+### 何时选择哪种模式
+
+| 场景 | 推荐模式 |
+|------|----------|
+| 同领域多个实验 | 模式 A（共享知识） |
+| 不同领域的独立研究 | 模式 B（完全隔离） |
+| 毕业论文（需特殊格式） | 模式 B（定制 agent） |
+| 快速探索性实验 | 模式 A（快速启动） |
+| 与他人协作的项目 | 模式 B（独立仓库） |
+
+---
+
+## 实验工作流
+
+### 端到端流程
+
+```
+初始化 → 开发 → 实验 → 分析 → 写作 → 投稿
+  │        │       │       │       │       │
+  │     code-    code-   data-   paper-  submis-
+  │    architect architect analyst  writer  sion-mgr
+  │        │       │       │       │       │
+  v        v       v       v       v       v
+/new-    /plan    wandb  /analyze /polish /submission
+project  /tdd    tracking -results /de-ai  -check
+```
+
+### 工具链
+
+| 工具 | 用途 | 配置位置 |
+|------|------|----------|
+| **uv** | Python 包管理 | `projects/{name}/pyproject.toml` |
+| **Hydra** | 实验配置管理 | `projects/{name}/run/conf/` |
+| **wandb** | 实验追踪和可视化 | `projects/{name}/run/conf/config.yaml` |
+| **Git** | 版本控制 | Conventional Commits |
+| **Zotero** | 文献管理 | MCP 集成 |
+
+### 项目目录结构
+
+每个研究项目（`projects/{name}/`）遵循标准结构：
+
+```
+projects/{name}/
+├── run/conf/          # Hydra 配置（code-architect 维护）
+├── run/pipeline/      # 训练/评估脚本
+├── src/               # 源代码（Factory & Registry 模式）
+├── data/              # 数据（raw/ 和 processed/）
+├── outputs/           # 实验输出（experiments/, checkpoints/, figures/, tables/）
+├── paper/             # 论文（draft/, figures/, tables/, references.bib）
+└── tests/             # 测试
+```
+
+详细规范见 `.claude/rules/experiment-workflow.md`。
+
+---
+
 ## 全局配置
 
 ### 语言设置
@@ -117,12 +213,22 @@
 - 代码注释使用中文，命名使用英文
 
 ### 工作目录规范
-- 计划文档: `workspace/plan/` 文件夹
+
+**全局工作区**（跨项目共享）：
+- 全局计划: `workspace/plan/` 文件夹
 - 临时文件: `workspace/temp/` 文件夹
 - 工作日志: `workspace/logs/` 文件夹
 - Agent 记忆: `team/{agent-name}/memory.md`
 - 知识库: `knowledge/` 文件夹
-- 文件夹不存在时自动创建
+
+**项目工作区**（每个研究项目独立）：
+- 实验配置: `projects/{name}/run/conf/`
+- 源代码: `projects/{name}/src/`
+- 实验输出: `projects/{name}/outputs/`
+- 论文文件: `projects/{name}/paper/`
+- 项目数据: `projects/{name}/data/`
+
+文件夹不存在时自动创建。
 
 ### 任务执行原则
 - 复杂任务先交流意见，再拆解实施
@@ -187,6 +293,7 @@ knowledge/
 | `/zotero-notes` | 批量阅读 Zotero 论文，生成结构化阅读笔记 |
 | `/literature-search` | 按关键词搜索相关文献 |
 | `/related-work` | 生成 Related Work 章节草稿 |
+| `/new-project` | 从模板创建新研究项目（配置 wandb、git 分支） |
 
 ### 实验与分析命令
 

@@ -99,6 +99,20 @@ model: inherit
 - 绝不做超出数据支持的声明
 - 运行次数 < 3 时必须标注局限性
 
+## 数据路径约定
+
+### 输入数据来源
+- 实验结果: `projects/{project-name}/outputs/experiments/`
+- 训练日志: wandb API 或 `projects/{project-name}/outputs/logs/`
+- 模型检查点: `projects/{project-name}/outputs/checkpoints/`
+
+### 输出目标
+- 中间图表: `projects/{project-name}/outputs/figures/`
+- 中间表格: `projects/{project-name}/outputs/tables/`
+- 论文最终图表: `projects/{project-name}/paper/figures/`
+- 论文最终表格: `projects/{project-name}/paper/tables/`
+- 分析报告: `projects/{project-name}/outputs/analysis-report.md`
+
 ## 持久化协议
 每次启动时：
 1. 读取 team/data-analyst/memory.md 获取历史上下文

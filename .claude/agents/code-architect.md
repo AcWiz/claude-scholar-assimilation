@@ -73,18 +73,38 @@ class SimpleDataset(Dataset):
 
 ## 项目目录规范
 
+所有实验代码和数据存放在 `projects/{project-name}/` 下：
+
 ```
-project/
-├── run/pipeline/          # 主工作流脚本
-├── run/conf/              # Hydra 配置文件
-├── src/data_module/       # 数据处理模块
-├── src/model_module/      # 模型实现
-├── src/trainer_module/    # 训练逻辑
-├── src/analysis_module/   # 分析评估
+projects/{project-name}/
+├── run/
+│   ├── conf/              # Hydra 配置文件
+│   │   ├── config.yaml    # 主配置（含 wandb 设置）
+│   │   ├── model/         # 模型配置组
+│   │   ├── dataset/       # 数据集配置组
+│   │   └── trainer/       # 训练配置组
+│   └── pipeline/          # 主工作流脚本
+├── src/
+│   ├── data_module/       # 数据处理模块（Factory & Registry）
+│   ├── model_module/      # 模型实现（Factory & Registry）
+│   ├── trainer_module/    # 训练逻辑
+│   └── utils/             # 项目工具
 ├── data/{raw,processed}/  # 数据目录
-├── outputs/{logs,checkpoints,tables,figures}/
-└── pyproject.toml         # 项目配置（uv 管理）
+├── outputs/
+│   ├── experiments/       # Hydra 自动输出
+│   ├── checkpoints/       # 模型检查点
+│   ├── figures/           # 图表输出
+│   └── tables/            # 表格输出
+├── paper/                 # 论文相关文件
+├── tests/                 # 测试
+└── pyproject.toml         # uv 包管理
 ```
+
+### 工具链
+- **包管理**: `uv`（禁止使用 pip install）
+- **配置管理**: Hydra + OmegaConf
+- **实验追踪**: Weights & Biases (wandb)
+- **代码质量**: ruff + mypy
 
 ## 代码质量标准
 - 文件 200-400 行，单一职责

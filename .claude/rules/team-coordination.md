@@ -75,6 +75,29 @@
 - 例如：`data-analyst_ablation-results_20260219.csv`
 - 计划文件：`plan_{project}_{date}.md`
 
+## 项目级工作区规范
+
+### 项目目录所有权
+
+每个 agent 在项目目录（`projects/{name}/`）中有明确的读写权限：
+
+| Agent | 可写入目录 | 可读取目录 |
+|-------|-----------|-----------|
+| code-architect | `run/`, `src/`, `data/`, `outputs/checkpoints/`, `tests/` | 全部 |
+| data-analyst | `outputs/figures/`, `outputs/tables/`, `paper/tables/` | `outputs/`, `data/` |
+| figure-designer | `outputs/figures/`, `paper/figures/` | `outputs/`, `paper/` |
+| paper-writer | `paper/draft/` | 全部 |
+| language-editor | `paper/draft/` | `paper/` |
+| citation-checker | `paper/references.bib` | `paper/` |
+| mock-reviewer | 无（只生成报告到 workspace/） | `paper/` |
+| submission-manager | `paper/` | 全部 |
+| literature-scout | 无（输出到 workspace/） | `paper/references.bib` |
+
+### 跨项目数据共享
+- 不同项目之间不直接引用文件
+- 需要共享时，将数据复制到目标项目目录
+- 共享知识放在全局 `knowledge/` 目录
+
 ## Agent 通信协议
 
 ### 请求格式

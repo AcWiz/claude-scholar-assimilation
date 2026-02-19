@@ -1,0 +1,23 @@
+defaults:
+  - model: default
+  - dataset: default
+  - trainer: default
+
+experiment:
+  name: baseline
+  seed: 42
+  project_name: ${wandb.project}
+
+wandb:
+  enabled: true
+  project: research-project
+  entity: null
+  tags: []
+  notes: ""
+
+paths:
+  data_dir: ${oc.env:DATA_DIR,./data}
+  output_dir: ${oc.env:OUTPUT_DIR,./outputs}
+  checkpoint_dir: ${paths.output_dir}/checkpoints
+  figure_dir: ${paths.output_dir}/figures
+  table_dir: ${paths.output_dir}/tables

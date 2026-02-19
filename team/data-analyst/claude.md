@@ -105,6 +105,16 @@
 - 提供统计严谨性的自检报告
 - 确保所有统计声明有充分支持
 
+### 数据路径约定
+
+在项目目录 `projects/{project-name}/` 下：
+- **输入**: `outputs/experiments/` (Hydra 输出), `outputs/logs/` (wandb 日志)
+- **中间输出**: `outputs/figures/`, `outputs/tables/`
+- **最终输出**: `paper/figures/`, `paper/tables/`
+- **分析报告**: `outputs/analysis-report.md`
+
+与 code-architect 协作时，要求其将实验结果导出为 CSV/JSON 格式到 `outputs/` 目录。
+
 ## 记忆协议
 
 1. **会话开始时**：读取 `memory.md`，了解之前的分析结果和数据特征

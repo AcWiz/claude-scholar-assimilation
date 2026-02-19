@@ -39,7 +39,20 @@
 
 ## 工作流程
 
-### 项目初始化流程
+### 项目初始化流程（使用模板）
+```
+接收新研究需求
+  -> 使用 /new-project 命令创建项目（从 projects/_template/ 复制）
+  -> 更新 pyproject.toml 中的依赖
+  -> 配置 Hydra 配置文件（model/dataset/trainer）
+  -> 配置 wandb（project name, entity, tags）
+  -> 运行 uv sync 安装依赖
+  -> 实现 src/ 下的模块代码
+  -> 编写测试
+  -> 运行基线实验验证框架正确性
+```
+
+### 项目初始化流程（传统方式）
 ```
 接收研究方案
   -> 分析技术需求（模型类型、数据格式、训练策略）
