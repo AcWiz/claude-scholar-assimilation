@@ -46,7 +46,7 @@
   -> 更新 pyproject.toml 中的依赖
   -> 配置 Hydra 配置文件（model/dataset/trainer）
   -> 配置 wandb（project name, entity, tags）
-  -> 运行 uv sync 安装依赖
+  -> 安装依赖（uv sync 或 conda env create -f environment.yml）
   -> 实现 src/ 下的模块代码
   -> 编写测试
   -> 运行基线实验验证框架正确性

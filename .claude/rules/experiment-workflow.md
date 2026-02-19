@@ -12,7 +12,7 @@
    ```bash
    cd projects/{project-name}
    cp .env.example .env  # 填写 WANDB_API_KEY 等
-   uv sync               # 安装依赖
+   uv sync               # 安装依赖（或 conda env create -f environment.yml）
    ```
 4. 初始化 git 分支：`git checkout -b project/{project-name}`
 5. 配置 wandb：更新 `run/conf/config.yaml` 中的 `wandb.project` 和 `wandb.entity`
@@ -37,13 +37,13 @@
 | `paper/references.bib` | 参考文献 | citation-checker | 读写 |
 | `tests/` | 测试代码 | code-architect | 读写 |
 
-## 包管理（uv）
+## 包管理
 
-### 基本操作
+支持两种包管理方案，根据服务器环境选择：
+
+### 方案 A：uv（推荐，适用于现代系统）
+
 ```bash
-# 初始化项目（已在模板中完成）
-uv init
-
 # 安装依赖
 uv sync
 
@@ -60,11 +60,48 @@ uv lock
 uv run python run/pipeline/train.py
 ```
 
-### 规范
-- 所有项目必须使用 `uv` 管理依赖
-- `pyproject.toml` 和 `uv.lock` 必须提交到 git
-- 禁止使用 `pip install` 直接安装（破坏依赖一致性）
-- 虚拟环境 `.venv/` 不提交到 git
+**配置文件**: `pyproject.toml` + `uv.lock`（必须提交到 git）
+
+### 方案 B：conda（miniconda/miniforge，适用于老系统）
+
+当训练服务器的操作系统版本较低（如 CentOS 7、旧版 Ubuntu）导致 uv 无法使用时，使用 conda：
+
+```bash
+# 创建环境（从模板）
+conda env create -f environment.yml
+
+# 激活环境
+conda activate {project-name}
+
+# 添加 conda 依赖
+conda install <package>
+
+# 添加 pip-only 依赖（conda 中没有的包）
+pip install <package>
+
+# 导出环境（更新 environment.yml）
+conda env export --from-history > environment.yml
+
+# 运行
+python run/pipeline/train.py
+```
+
+**配置文件**: `environment.yml`（必须提交到 git）
+
+### 如何选择
+
+| 条件 | 推荐方案 |
+|------|----------|
+| 本地开发（macOS/新版 Linux） | uv |
+| 训练服务器（老系统/glibc 版本低） | conda (miniforge) |
+| 需要 CUDA 特定版本 | conda（更方便管理 CUDA toolkit） |
+| 追求依赖解析速度 | uv |
+
+### 通用规范
+- 禁止使用裸 `pip install` 直接安装（破坏依赖一致性）
+- `pyproject.toml`（uv）或 `environment.yml`（conda）必须提交到 git
+- 虚拟环境 `.venv/` 和 `.conda/` 不提交到 git
+- 两份配置文件可以同时存在（同一项目在不同环境使用不同方案）
 
 ## 实验追踪（Weights & Biases）
 

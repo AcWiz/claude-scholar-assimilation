@@ -97,11 +97,12 @@ projects/{project-name}/
 │   └── tables/            # 表格输出
 ├── paper/                 # 论文相关文件
 ├── tests/                 # 测试
-└── pyproject.toml         # uv 包管理
+├── pyproject.toml         # uv 包管理
+└── environment.yml        # conda 环境配置（备选）
 ```
 
 ### 工具链
-- **包管理**: `uv`（禁止使用 pip install）
+- **包管理**: `uv`（推荐）或 `conda`（miniconda/miniforge，适用于老系统）
 - **配置管理**: Hydra + OmegaConf
 - **实验追踪**: Weights & Biases (wandb)
 - **代码质量**: ruff + mypy

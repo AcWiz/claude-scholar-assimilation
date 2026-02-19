@@ -19,6 +19,7 @@ Thumbs.db
 __pycache__/
 *.pyc
 .venv/
+.conda/
 
 # Node
 node_modules/

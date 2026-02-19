@@ -39,7 +39,7 @@ arguments:
 5. **输出确认**：
    显示项目结构和下一步操作指南：
    - 配置 wandb API key
-   - 安装依赖：`cd projects/$name && uv sync`
+   - 安装依赖：`cd projects/$name && uv sync`（或 `conda env create -f environment.yml`）
    - 开始研究
 
 ## 注意事项

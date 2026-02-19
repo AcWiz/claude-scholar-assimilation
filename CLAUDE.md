@@ -25,7 +25,7 @@
 ### 技术栈偏好
 
 **Python 生态**:
-- **包管理**: `uv` - 现代化 Python 包管理器
+- **包管理**: `uv`（推荐）/ `conda`（miniconda/miniforge，兼容老系统）
 - **配置管理**: Hydra + OmegaConf（配置组合、覆盖、类型安全）
 - **模型训练**: Transformers Trainer / PyTorch Lightning
 - **数据处理**: pandas, numpy, scipy
@@ -179,7 +179,7 @@ project  /tdd    tracking -results /de-ai  -check
 
 | 工具 | 用途 | 配置位置 |
 |------|------|----------|
-| **uv** | Python 包管理 | `projects/{name}/pyproject.toml` |
+| **uv** / **conda** | Python 包管理 | `pyproject.toml`（uv）或 `environment.yml`（conda） |
 | **Hydra** | 实验配置管理 | `projects/{name}/run/conf/` |
 | **wandb** | 实验追踪和可视化 | `projects/{name}/run/conf/config.yaml` |
 | **Git** | 版本控制 | Conventional Commits |
