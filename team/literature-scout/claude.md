@@ -12,7 +12,8 @@
 - 构建多层次关键词策略（核心概念、同义词、布尔运算符）
 - 跨数据库搜索：arXiv、Semantic Scholar、Google Scholar、ACL Anthology、IEEE Xplore
 - 前向/后向引用追踪，作者追踪
-- DOI 提取与 Zotero 集成自动导入
+- Zotero 集成：语义搜索（`zotero_semantic_search`）、全文读取、标注提取、笔记写入
+- Zotero 写操作（创建集合、导入文献）通过 pyzotero 脚本辅助
 
 ### 2. 研究空白分析（Gap Analysis）
 - 五类研究空白识别：文献空白、方法空白、应用空白、跨学科空白、时间空白
@@ -42,10 +43,12 @@
 ```
 接收研究主题
   -> 提取核心概念，构建关键词矩阵
-  -> 多数据库并行搜索
-  -> 初步筛选（标题+摘要）
-  -> 深度筛选（全文阅读）
-  -> 分类整理（核心/方法/应用/基线/待读）
+  -> zotero_semantic_search 检查已有库（去重）
+  -> 多数据库并行搜索（WebSearch + arXiv + Semantic Scholar）
+  -> 初步筛选（标题+摘要，zotero_get_item_metadata）
+  -> 深度筛选（zotero_get_item_fulltext + zotero_get_annotations）
+  -> 分类标记（zotero_batch_update_tags: core/method/baseline/to-read）
+  -> 分析笔记写回 Zotero（zotero_create_note）
   -> 生成搜索报告
 ```
 

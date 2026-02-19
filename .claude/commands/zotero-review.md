@@ -17,17 +17,18 @@ Read and analyze papers in the Zotero collection "$collection", with analysis de
 
 ### Step 1: Locate Collection
 
-1. Call `mcp__zotero__get_collections` to list all collections
+1. Call `mcp__zotero__zotero_get_collections` to list all collections
 2. Find the collection matching "$collection" (fuzzy match supported)
-3. Call `mcp__zotero__get_collection_items` to get all items
+3. Call `mcp__zotero__zotero_get_collection_items` to get all items
 
 ### Step 2: Read Papers
 
 For each paper:
-1. Call `mcp__zotero__get_items_details` with `include_abstract: true`
-2. Call `mcp__zotero__get_item_fulltext` to read full text (if PDF available)
-3. Quick depth: analyze abstract and introduction only
-4. Deep depth: analyze complete paper content
+1. Call `mcp__zotero__zotero_get_item_metadata` to get metadata (with BibTeX if needed)
+2. Call `mcp__zotero__zotero_get_item_fulltext` to read full text (if PDF available)
+3. Call `mcp__zotero__zotero_get_annotations` to read PDF highlights and comments
+4. Quick depth: analyze abstract and introduction only
+5. Deep depth: analyze complete paper content + annotations
 
 ### Step 3: Generate Notes
 
@@ -39,6 +40,7 @@ Create structured notes for each paper:
 - **Relevance**: How does it relate to our research?
 
 Deep mode: create individual `paper-notes/{paper-title}.md` files.
+Optionally write notes back to Zotero via `mcp__zotero__zotero_create_note`.
 
 ### Step 4: Synthesis
 
@@ -49,8 +51,8 @@ Deep mode: create individual `paper-notes/{paper-title}.md` files.
 
 ## Error Handling
 
-- `get_item_fulltext` fails: use `WebFetch` on DOI URL, fall back to abstractNote
-- `get_collection_items` fails: use `search_library` with keywords, filter results
+- `zotero_get_item_fulltext` fails: use `WebFetch` on DOI URL, fall back to abstractNote
+- `zotero_get_collection_items` fails: use `zotero_search_items` with keywords, filter results
 - Single paper fails: log error, skip, continue
 - API rate limit: wait 5 seconds, retry up to 3 times
 

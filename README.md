@@ -13,6 +13,7 @@
 - **持久化记忆**：Agent 记忆跨会话保持，积累你的写作偏好和研究习惯
 - **标准化实验模板**：Hydra 配置 + wandb 追踪 + Factory & Registry 模式
 - **双包管理支持**：uv（推荐）/ conda（miniconda/miniforge，兼容老系统）
+- **Zotero 深度集成**：语义搜索、全文读取、PDF 标注提取、笔记写入（54yyyu/zotero-mcp）
 - **安全钩子**：自动拦截密钥泄漏、危险命令
 
 ## 前置要求
@@ -21,6 +22,7 @@
 - Git
 - Python >= 3.10
 - 包管理器：[uv](https://docs.astral.sh/uv/)（推荐）或 [miniforge](https://github.com/conda-forge/miniforge) / [miniconda](https://docs.anaconda.com/miniconda/)
+- [Zotero](https://www.zotero.org/) 账号 + API Key（可选，用于文献管理集成）
 
 ## 快速开始
 
@@ -281,6 +283,7 @@ projects/{name}/
 | **Hydra** | 实验配置管理 | YAML 配置组合 + CLI 覆盖 |
 | **wandb** | 实验追踪 | 自动记录指标、超参、系统信息 |
 | **Git** | 版本控制 | Conventional Commits 规范 |
+| **Zotero** | 文献管理 | [54yyyu/zotero-mcp](https://github.com/54yyyu/zotero-mcp)，语义搜索 + 全文 + 标注 |
 
 ## 自定义
 

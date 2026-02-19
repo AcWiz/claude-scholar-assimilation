@@ -71,7 +71,7 @@
 
 | Agent | 角色 | 核心职责 |
 |-------|------|---------|
-| **literature-scout** | 文献侦察兵 | 文献搜索、分类、趋势分析、Related Work 草稿、Zotero MCP 集成 |
+| **literature-scout** | 文献侦察兵 | 文献搜索、语义搜索、全文分析、PDF 标注读取、笔记写入、Zotero MCP 集成（54yyyu/zotero-mcp） |
 | **code-architect** | 代码架构师 | ML 项目架构设计、代码审查、重构、TDD、Factory & Registry 模式 |
 | **data-analyst** | 数据分析师 | 实验结果分析、统计检验、消融实验、数据可视化、表格生成 |
 | **paper-writer** | 论文写手 | 论文各 Section 写作、逻辑连贯性、学术表达、去 AI 痕迹 |
@@ -183,7 +183,7 @@ project  /tdd    tracking -results /de-ai  -check
 | **Hydra** | 实验配置管理 | `projects/{name}/run/conf/` |
 | **wandb** | 实验追踪和可视化 | `projects/{name}/run/conf/config.yaml` |
 | **Git** | 版本控制 | Conventional Commits |
-| **Zotero** | 文献管理 | MCP 集成 |
+| **Zotero** | 文献管理（搜索、全文、标注、语义搜索） | MCP 集成（54yyyu/zotero-mcp，Web API 模式） |
 
 ### 项目目录结构
 
@@ -342,7 +342,7 @@ knowledge/
 
 | Agent | 一句话描述 |
 |-------|----------|
-| `literature-scout` | 文献搜索与综述生成，Zotero MCP 深度集成 |
+| `literature-scout` | 文献搜索、语义搜索、全文分析、PDF 标注，Zotero MCP 集成（54yyyu/zotero-mcp） |
 | `code-architect` | ML 项目代码架构设计与审查，Factory & Registry 模式 |
 | `data-analyst` | 自动化实验结果分析、统计检验和数据可视化 |
 | `paper-writer` | 学术论文各 Section 写作，符合顶会标准 |

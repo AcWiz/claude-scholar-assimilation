@@ -17,7 +17,7 @@ Spawn a multi-agent research team for parallel work on project "$project". Agent
 
 | Agent | Role | Responsibility |
 |-------|------|----------------|
-| `literature-reviewer` | Literature Search | Zotero integration, paper analysis, literature review |
+| `literature-scout` | Literature Search | Zotero MCP（语义搜索、全文、标注）, paper analysis, literature review |
 | `data-analyst` | Experiment Analysis | Statistical analysis, visualization specs, results drafts |
 | `language-editor` | Writing & Translation | Translation, polishing, compression, expansion, de-AI |
 | `figure-designer` | Figures & Tables | Chart recommendation, figure/table captions |

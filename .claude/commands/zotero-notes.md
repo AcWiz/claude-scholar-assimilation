@@ -17,13 +17,16 @@ Generate structured reading notes for papers in the Zotero collection "$collecti
 
 ### Step 1: Load Papers
 
-1. Call `mcp__zotero__get_collections` to find the matching collection
-2. Call `mcp__zotero__get_collection_items` to list all papers
-3. Call `mcp__zotero__get_items_details` to get metadata
+1. Call `mcp__zotero__zotero_get_collections` to find the matching collection
+2. Call `mcp__zotero__zotero_get_collection_items` to list all papers
+3. Call `mcp__zotero__zotero_get_item_metadata` to get metadata for each item
 
 ### Step 2: Read and Annotate
 
-For each paper with a PDF, call `mcp__zotero__get_item_fulltext` to read content.
+For each paper with a PDF:
+1. Call `mcp__zotero__zotero_get_item_fulltext` to read content
+2. Call `mcp__zotero__zotero_get_annotations` to read existing highlights/comments
+3. Call `mcp__zotero__zotero_get_notes` to read existing notes
 
 **summary format:**
 - One-paragraph summary per paper
@@ -44,9 +47,9 @@ For each paper with a PDF, call `mcp__zotero__get_item_fulltext` to read content
 - Performance comparison (if applicable)
 
 **Content retrieval fallback chain:**
-1. `get_item_fulltext` (primary)
+1. `zotero_get_item_fulltext` (primary)
 2. `WebFetch(https://doi.org/{DOI})` (scrape abstract)
-3. `abstractNote` + Claude domain knowledge
+3. `abstractNote` from metadata + Claude domain knowledge
 
 ### Step 3: Output
 
@@ -56,13 +59,14 @@ For each paper with a PDF, call `mcp__zotero__get_item_fulltext` to read content
 
 ### Step 4: Write Notes to Zotero (Optional)
 
-If user requests, create child notes via Zotero REST API (no MCP `add_note` tool exists).
+Use `mcp__zotero__zotero_create_note` to write structured reading notes back to Zotero as child notes.
 
 ## Best Practices
 
 - Validate the first paper through the full pipeline before batch processing
 - Process 4-7 papers per batch with pauses for review
 - Cross-reference papers using Zotero item keys in the "Relationship" section
+- Use `mcp__zotero__zotero_batch_update_tags` to tag processed papers (e.g., "notes-done")
 
 ## Output Files
 
