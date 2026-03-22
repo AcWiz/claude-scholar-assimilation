@@ -1,0 +1,1689 @@
+{
+  "papers": [
+    {
+      "arxiv_id": "2507.06479v1",
+      "title": "Generative Lagrangian data assimilation for ocean dynamics under extreme sparsity",
+      "arxiv_url": "http://arxiv.org/abs/2507.06479v1",
+      "authors": [
+        "Niloofar Asefi",
+        "Leonard Lupin-Jimenez",
+        "Tianning Wu",
+        "Ruoying He",
+        "Ashesh Chattopadhyay"
+      ],
+      "published": "2025-07-09",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG",
+        "math.DS",
+        "nlin.CD"
+      ],
+      "abstract": "Reconstructing ocean dynamics from observational data is fundamentally limited by the sparse, irregular, and Lagrangian nature of spatial sampling, particularly in subsurface and remote regions. This sparsity poses significant challenges for forecasting key phenomena such as eddy shedding and rogue waves. Traditional data assimilation methods and deep learning models often struggle to recover mesoscale turbulence under such constraints. We leverage a deep learning framework that combines neural operators with denoising diffusion probabilistic models (DDPMs) to reconstruct high-resolution ocean states from extremely sparse Lagrangian observations. By conditioning the generative model on neural operator outputs, the framework accurately captures small-scale, high-wavenumber dynamics even at $99\\%$ sparsity (for synthetic data) and $99.9\\%$ sparsity (for real satellite observations). We validate our method on benchmark systems, synthetic float observations, and real satellite data, demonstrating robust performance under severe spatial sampling limitations as compared to other deep learning baselines.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2308.11814v1",
+      "title": "Evaluation of Deep Neural Operator Models toward Ocean Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2308.11814v1",
+      "authors": [
+        "Ellery Rajagopal",
+        "Anantha N. S. Babu",
+        "Tony Ryu",
+        "Patrick J. Haley",
+        "Chris Mirabito",
+        "Pierre F. J. Lermusiaux"
+      ],
+      "published": "2023-08-22",
+      "year": 2023,
+      "categories": [
+        "cs.LG",
+        "cs.CE",
+        "physics.ao-ph",
+        "physics.geo-ph"
+      ],
+      "abstract": "Data-driven, deep-learning modeling frameworks have been recently developed for forecasting time series data. Such machine learning models may be useful in multiple domains including the atmospheric and oceanic ones, and in general, the larger fluids community. The present work investigates the possible effectiveness of such deep neural operator models for reproducing and predicting classic fluid flows and simulations of realistic ocean dynamics. We first briefly evaluate the capabilities of such deep neural operator models when trained on a simulated two-dimensional fluid flow past a cylinder. We then investigate their application to forecasting ocean surface circulation in the Middle Atlantic Bight and Massachusetts Bay, learning from high-resolution data-assimilative simulations employed for real sea experiments. We confirm that trained deep neural operator models are capable of predicting idealized periodic eddy shedding. For realistic ocean surface flows and our preliminary study, they can predict several of the features and show some skill, providing potential for future research and applications.",
+      "doi": "10.23919/OCEANS52994.2023.10337380",
+      "comment": "Rajagopal, E., A.N.S. Babu, T. Ryu, P.J. Haley, Jr., C. Mirabito, and P.F.J. Lermusiaux, 2023. Evaluation of Deep Neural Operator Models toward Ocean Forecasting. In OCEANS' 23 IEEE/MTS Gulf Coast, 25-28 September 2023, in press",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2508.03315v1",
+      "title": "Bridging ocean wave physics and deep learning: Physics-informed neural operators for nonlinear wavefield reconstruction in real-time",
+      "arxiv_url": "http://arxiv.org/abs/2508.03315v1",
+      "authors": [
+        "Svenja Ehlers",
+        "Merten Stender",
+        "Norbert Hoffmann"
+      ],
+      "published": "2025-08-05",
+      "year": 2025,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Accurate real-time prediction of phase-resolved ocean wave fields remains a critical yet largely unsolved problem, primarily due to the absence of practical data assimilation methods for reconstructing initial conditions from sparse or indirect wave measurements. While recent advances in supervised deep learning have shown potential for this purpose, they require large labelled datasets of ground truth wave data, which are infeasible to obtain in real-world scenarios. To overcome this limitation, we propose a Physics-Informed Neural Operator (PINO) framework for reconstructing spatially and temporally phase-resolved, nonlinear ocean wave fields from sparse measurements, without the need for ground truth data during training. This is achieved by embedding residuals of the free surface boundary conditions of ocean gravity waves into the loss function of the PINO, constraining the solution space in a soft manner. After training, we validate our approach using highly realistic synthetic wave data and demonstrate the accurate reconstruction of nonlinear wave fields from both buoy time series and radar snapshots. Our results indicate that PINOs enable accurate, real-time reconstruction and generalize robustly across a wide range of wave conditions, thereby paving the way for operational, data-driven wave reconstruction and prediction in realistic marine environments.",
+      "doi": "",
+      "comment": "13 pages, 7 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2206.01599v1",
+      "title": "A Deep-Learning Usability Expansion Model of Ocean Observations",
+      "arxiv_url": "http://arxiv.org/abs/2206.01599v1",
+      "authors": [
+        "Ali Muhamed Ali",
+        "Hanqi Zhuang",
+        "Yu Huang",
+        "Ali K. Ibrahim",
+        "Ali Salem Altaher",
+        "Laurent Chérubin"
+      ],
+      "published": "2022-06-03",
+      "year": 2022,
+      "categories": [
+        "eess.SP"
+      ],
+      "abstract": "Today's ocean numerical prediction skills depend on the availability of in-situ and remote ocean observations at the time of the predictions only. Because observations are scarce and discontinuous in time and space, numerical models are often unable to accurately model and predict real ocean dynamics, leading to a lack of fulfillment of a range of services that require reliable predictions at various temporal and spatial scales. The process of constraining free numerical models with observations is known as data assimilation. The primary objective is to minimize the misfit of model states with the observations while respecting the rules of physics. The caveat of this approach is that measurements are used only once, at the time of the prediction. The information contained in the history of the measurements and its role in the determinism of the prediction is, therefore, not accounted for. Consequently, historical measurement cannot be used in real-time forecasting systems. The research presented in this paper provides a novel approach rooted in artificial intelligence to expand the usability of observations made before the time of the prediction. Our approach is based on the re-purpose of an existing deep learning model, called U-Net, designed specifically for image segmentation analysis in the biomedical field. U-Net is used here to create a Transform Model that retains the temporal and spatial evolution of the differences between model and observations to produce a correction in the form of regression weights that evolves spatially and temporally with the model both forward and backward in time, beyond the observation period. Using virtual observations, we show that the usability of the observation can be extended up to a one year prior or post observations.",
+      "doi": "",
+      "comment": "34 pages, 14 figurs, one table",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2503.19160v1",
+      "title": "Deep learning in the abyss: a stratified Physics Informed Neural Network for data assimilation",
+      "arxiv_url": "http://arxiv.org/abs/2503.19160v1",
+      "authors": [
+        "Vadim Limousin",
+        "Nelly Pustelnik",
+        "Bruno Deremble",
+        "Antoine Venaille"
+      ],
+      "published": "2025-03-24",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph",
+        "physics.flu-dyn"
+      ],
+      "abstract": "The reconstruction of deep ocean currents is a major challenge in data assimilation due to the scarcity of interior data. In this work, we present a proof of concept for deep ocean flow reconstruction using a Physics-Informed Neural Network (PINN), a machine learning approach that offers an alternative to traditional data assimilation methods. We introduce an efficient algorithm called StrAssPINN (for Stratified Assimilation PINNs), which assigns a separate network to each layer of the ocean model while allowing them to interact during training. The neural network takes spatiotemporal coordinates as input and predicts the velocity field at those points. Using a SIREN architecture (a multilayer perceptron with sine activation functions), which has proven effective in various contexts, the network is trained using both available observational data and dynamical priors enforced at several collocation points. We apply this method to pseudo-observed ocean data generated from a 3-layer quasi-geostrophic model, where the pseudo-observations include surface-level data akin to SWOT observations of sea surface height, interior data similar to ARGO floats, and a limited number of deep ARGO-like measurements in the lower layers. Our approach successfully reconstructs ocean flows in both the interior and surface layers, demonstrating a strong ability to resolve key ocean mesoscale features, including vortex rings, eastward jets associated with potential vorticity fronts, and smoother Rossby waves. This work serves as a prelude to applying StrAssPINN to real-world observational data.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2501.08430v1",
+      "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
+      "arxiv_url": "http://arxiv.org/abs/2501.08430v1",
+      "authors": [
+        "Svenja Ehlers",
+        "Norbert Hoffmann",
+        "Tianning Tang",
+        "Adrian H. Callaghan",
+        "Rui Cao",
+        "Enrique M. Padilla",
+        "Yuxin Fang",
+        "Merten Stender"
+      ],
+      "published": "2025-01-14",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph",
+        "physics.flu-dyn"
+      ],
+      "abstract": "The assimilation and prediction of phase-resolved surface gravity waves are critical challenges in ocean science and engineering. Potential flow theory (PFT) has been widely employed to develop wave models and numerical techniques for wave prediction. However, traditional wave prediction methods are often limited. For example, most simplified wave models have a limited ability to capture strong wave nonlinearity, while fully nonlinear PFT solvers often fail to meet the speed requirements of engineering applications. This computational inefficiency also hinders the development of effective data assimilation techniques, which are required to reconstruct spatial wave information from sparse measurements to initialize the wave prediction. To address these challenges, we propose a novel solver method that leverages physics-informed neural networks (PINNs) that parameterize PFT solutions as neural networks. This provides a computationally inexpensive way to assimilate and predict wave data. The proposed PINN framework is validated through comparisons with analytical linear PFT solutions and experimental data collected in a laboratory wave flume. The results demonstrate that our approach accurately captures and predicts irregular, nonlinear, and dispersive wave surface dynamics. Moreover, the PINN can infer the fully nonlinear velocity potential throughout the entire fluid volume solely from surface elevation measurements, enabling the calculation of fluid velocities that are difficult to measure experimentally.",
+      "doi": "",
+      "comment": "22 pages, 12 Figures, preprint",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2212.03656v2",
+      "title": "Spatio-Temporal Super-Resolution Data Assimilation (SRDA) Utilizing Deep Neural Networks with Domain Generalization",
+      "arxiv_url": "http://arxiv.org/abs/2212.03656v2",
+      "authors": [
+        "Yuki Yasuda",
+        "Ryo Onishi"
+      ],
+      "published": "2022-12-07",
+      "year": 2022,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "Deep learning has recently gained attention in the atmospheric and oceanic sciences for its potential to improve the accuracy of numerical simulations or to reduce computational costs. Super-resolution is one such technique for high-resolution inference from low-resolution data. This paper proposes a new scheme, called four-dimensional super-resolution data assimilation (4D-SRDA). This framework calculates the time evolution of a system from low-resolution simulations using a physics-based model, while a trained neural network simultaneously performs data assimilation and spatio-temporal super-resolution. The use of low-resolution simulations without ensemble members reduces the computational cost of obtaining inferences at high spatio-temporal resolution. In 4D-SRDA, physics-based simulations and neural-network inferences are performed alternately, possibly causing a domain shift, i.e., a statistical difference between the training and test data, especially in offline training. Domain shifts can reduce the accuracy of inference. To mitigate this risk, we developed super-resolution mixup (SR-mixup)--a data augmentation method for domain generalization. SR-mixup creates a linear combination of randomly sampled inputs, resulting in synthetic data with a different distribution from the original data. The proposed methods were validated using an idealized barotropic ocean jet with supervised learning. The results suggest that the combination of 4D-SRDA and SR-mixup is effective for robust inference cycles. This study highlights the potential of super-resolution and domain-generalization techniques, in the field of data assimilation, especially for the integration of physics-based and data-driven models.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2109.08017v1",
+      "title": "Super-resolution data assimilation",
+      "arxiv_url": "http://arxiv.org/abs/2109.08017v1",
+      "authors": [
+        "Sébastien Barthélémy",
+        "Julien Brajard",
+        "Laurent Bertino",
+        "François Counillon"
+      ],
+      "published": "2021-09-04",
+      "year": 2021,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG",
+        "nlin.CD",
+        "physics.comp-ph",
+        "physics.data-an"
+      ],
+      "abstract": "Increasing the resolution of a model can improve the performance of a data assimilation system: first because model field are in better agreement with high resolution observations, then the corrections are better sustained and, with ensemble data assimilation, the forecast error covariances are improved. However, resolution increase is associated with a cubical increase of the computational costs. Here we are testing an approach inspired from images super-resolution techniques and called \"Super-resolution data assimilation\" (SRDA). Starting from a low-resolution forecast, a neural network (NN) emulates a high-resolution field that is then used to assimilate high-resolution observations. We apply the SRDA to a quasi-geostrophic model representing simplified surface ocean dynamics, with a model resolution up to four times lower than the reference high-resolution and we use the Ensemble Kalman Filter data assimilation method. We show that SRDA outperforms the low-resolution data assimilation approach and a SRDA version with cubic spline interpolation instead of NN. The NN's ability to anticipate the systematic differences between low and high resolution model dynamics explains the enhanced performance, for example by correcting the difference of propagation speed of eddies. Increasing the computational cost by 55\\% above the LR data assimilation system (using a 25-members ensemble), the SRDA reduces the errors by 40\\% making the performance very close to the HR system (16\\% larger, compared to 92\\% larger for the LR EnKF). The reliability of the ensemble system is not degraded by SRDA.",
+      "doi": "10.1007/s10236-022-01523-x",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2510.15284v1",
+      "title": "Small Ensemble-based Data Assimilation: A Machine Learning-Enhanced Data Assimilation Method with Limited Ensemble Size",
+      "arxiv_url": "http://arxiv.org/abs/2510.15284v1",
+      "authors": [
+        "Zhilin Li",
+        "Zhou Yao",
+        "Xianglong Li",
+        "Zeng Liu",
+        "Zhaokuan Lu",
+        "Shanlin Xu",
+        "Seungnam Kim",
+        "Guangyao Wang"
+      ],
+      "published": "2025-10-17",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "math.ST"
+      ],
+      "abstract": "Ensemble-based data assimilation (DA) methods have become increasingly popular due to their inherent ability to address nonlinear dynamic problems. However, these methods often face a trade-off between analysis accuracy and computational efficiency, as larger ensemble sizes required for higher accuracy also lead to greater computational cost. In this study, we propose a novel machine learning-based data assimilation approach that combines the traditional ensemble Kalman filter (EnKF) with a fully connected neural network (FCNN). Specifically, our method uses a relatively small ensemble size to generate preliminary yet suboptimal analysis states via EnKF. A FCNN is then employed to learn and predict correction terms for these states, thereby mitigating the performance degradation induced by the limited ensemble size. We evaluate the performance of our proposed EnKF-FCNN method through numerical experiments involving Lorenz systems and nonlinear ocean wave field simulations. The results consistently demonstrate that the new method achieves higher accuracy than traditional EnKF with the same ensemble size, while incurring negligible additional computational cost. Moreover, the EnKF-FCNN method is adaptable to diverse applications through coupling with different models and the use of alternative ensemble-based DA methods.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2511.06041v1",
+      "title": "Advancing Ocean State Estimation with efficient and scalable AI",
+      "arxiv_url": "http://arxiv.org/abs/2511.06041v1",
+      "authors": [
+        "Yanfei Xiang",
+        "Yuan Gao",
+        "Hao Wu",
+        "Quan Zhang",
+        "Ruiqi Shu",
+        "Xiao Zhou",
+        "Xi Wu",
+        "Xiaomeng Huang"
+      ],
+      "published": "2025-11-08",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Accurate and efficient global ocean state estimation remains a grand challenge for Earth system science, hindered by the dual bottlenecks of computational scalability and degraded data fidelity in traditional data assimilation (DA) and deep learning (DL) approaches. Here we present an AI-driven Data Assimilation Framework for Ocean (ADAF-Ocean) that directly assimilates multi-source and multi-scale observations, ranging from sparse in-situ measurements to 4 km satellite swaths, without any interpolation or data thinning. Inspired by Neural Processes, ADAF-Ocean learns a continuous mapping from heterogeneous inputs to ocean states, preserving native data fidelity. Through AI-driven super-resolution, it reconstructs 0.25$^\\circ$ mesoscale dynamics from coarse 1$^\\circ$ fields, which ensures both efficiency and scalability, with just 3.7\\% more parameters than the 1$^\\circ$ configuration. When coupled with a DL forecasting system, ADAF-Ocean extends global forecast skill by up to 20 days compared to baselines without assimilation. This framework establishes a computationally viable and scientifically rigorous pathway toward real-time, high-resolution Earth system monitoring.",
+      "doi": "",
+      "comment": "29 papes, 10 Figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2105.05363v1",
+      "title": "A Langevinized Ensemble Kalman Filter for Large-Scale Static and Dynamic Learning",
+      "arxiv_url": "http://arxiv.org/abs/2105.05363v1",
+      "authors": [
+        "Peiyi Zhang",
+        "Qifan Song",
+        "Faming Liang"
+      ],
+      "published": "2021-05-11",
+      "year": 2021,
+      "categories": [
+        "stat.ME"
+      ],
+      "abstract": "The Ensemble Kalman Filter (EnKF) has achieved great successes in data assimilation in atmospheric and oceanic sciences, but its failure in convergence to the right filtering distribution precludes its use for uncertainty quantification. We reformulate the EnKF under the framework of Langevin dynamics, which leads to a new particle filtering algorithm, the so-called Langevinized EnKF. The Langevinized EnKF inherits the forecast-analysis procedure from the EnKF and the use of mini-batch data from the stochastic gradient Langevin-type algorithms, which make it scalable with respect to both the dimension and sample size. We prove that the Langevinized EnKF converges to the right filtering distribution in Wasserstein distance under the big data scenario that the dynamic system consists of a large number of stages and has a large number of samples observed at each stage. We reformulate the Bayesian inverse problem as a dynamic state estimation problem based on the techniques of subsampling and Langevin diffusion process. We illustrate the performance of the Langevinized EnKF using a variety of examples, including the Lorenz-96 model, high-dimensional variable selection, Bayesian deep learning, and Long Short Term Memory (LSTM) network learning with dynamic data.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2205.13410v1",
+      "title": "Equation-free surrogate modeling of geophysical flows at the intersection of machine learning and data assimilation",
+      "arxiv_url": "http://arxiv.org/abs/2205.13410v1",
+      "authors": [
+        "Suraj Pawar",
+        "Omer San"
+      ],
+      "published": "2022-05-26",
+      "year": 2022,
+      "categories": [
+        "physics.flu-dyn"
+      ],
+      "abstract": "There is a growing interest in developing data-driven reduced-order models for atmospheric and oceanic flows that are trained on data obtained either from high-resolution simulations or satellite observations. The data-driven models are non-intrusive in nature and offer significant computational savings compared to large-scale numerical models. These low-dimensional models can be utilized to reduce the computational burden of generating forecasts and estimating model uncertainty without losing the key information needed for data assimilation to produce accurate state estimates. This paper aims at exploring an equation-free surrogate modeling approach at the intersection of machine learning and data assimilation in Earth system modeling. With this objective, we introduce an end-to-end non-intrusive reduced-order modeling (NIROM) framework equipped with contributions in modal decomposition, time series prediction, optimal sensor placement, and sequential data assimilation. Specifically, we use proper orthogonal decomposition (POD) to identify the dominant structures of the flow, and a long short-term memory network to model the dynamics of the POD modes. The NIROM is integrated within the deterministic ensemble Kalman filter (DEnKF) to incorporate sparse and noisy observations at optimal sensor locations obtained through QR pivoting. The feasibility and the benefit of the proposed framework are demonstrated for the NOAA Optimum Interpolation Sea Surface Temperature (SST) V2 dataset. Our results indicate that the NIROM is stable for long-term forecasting and can model dynamics of SST with a reasonable level of accuracy. Furthermore, the prediction accuracy of the NIROM gets improved by one order of magnitude by the DEnKF algorithm. This work provides a way forward toward transitioning these methods to fuse information from Earth system models and observations to achieve accurate forecasts.",
+      "doi": "10.1029/2022MS003170",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2406.07680v1",
+      "title": "Watching Swarm Dynamics from Above: A Framework for Advanced Object Tracking in Drone Videos",
+      "arxiv_url": "http://arxiv.org/abs/2406.07680v1",
+      "authors": [
+        "Duc Pham",
+        "Matthew Hansen",
+        "Félicie Dhellemmes",
+        "Jens Krause",
+        "Pia Bideau"
+      ],
+      "published": "2024-06-11",
+      "year": 2024,
+      "categories": [
+        "cs.CV"
+      ],
+      "abstract": "Easily accessible sensors, like drones with diverse onboard sensors, have greatly expanded studying animal behavior in natural environments. Yet, analyzing vast, unlabeled video data, often spanning hours, remains a challenge for machine learning, especially in computer vision. Existing approaches often analyze only a few frames. Our focus is on long-term animal behavior analysis. To address this challenge, we utilize classical probabilistic methods for state estimation, such as particle filtering. By incorporating recent advancements in semantic object segmentation, we enable continuous tracking of rapidly evolving object formations, even in scenarios with limited data availability. Particle filters offer a provably optimal algorithmic structure for recursively adding new incoming information. We propose a novel approach for tracking schools of fish in the open ocean from drone videos. Our framework not only performs classical object tracking in 2D, instead it tracks the position and spatial expansion of the fish school in world coordinates by fusing video data and the drone's on board sensor information (GPS and IMU). The presented framework for the first time allows researchers to study collective behavior of fish schools in its natural social and environmental context in a non-invasive and scalable way.",
+      "doi": "",
+      "comment": "CVPRW: Workshop paper appearing in CV4Animals",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1906.06722v2",
+      "title": "A fast tunable blurring algorithm for scattered data",
+      "arxiv_url": "http://arxiv.org/abs/1906.06722v2",
+      "authors": [
+        "Gregor Robinson",
+        "Ian Grooms"
+      ],
+      "published": "2019-06-16",
+      "year": 2019,
+      "categories": [
+        "stat.CO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "abstract": "A blurring algorithm with linear time complexity can reduce the small-scale content of data observed at scattered locations in a spatially extended domain of arbitrary dimension. The method works by forming a Gaussian interpolant of the input data, and then convolving the interpolant with a multiresolution Gaussian approximation of the Green's function to a differential operator whose spectrum can be tuned for problem-specific considerations. Like conventional blurring algorithms, which the new algorithm generalizes to data measured at locations other than a uniform grid, applications include deblurring and separation of spatial scales. An example illustrates a possible application toward enabling importance sampling approaches to data assimilation of geophysical observations, which are often scattered over a spatial domain, since blurring observations can make particle filters more effective at state estimation of large scales. Another example, motivated by data analysis of dynamics like ocean eddies that have strong separation of spatial scales, uses the algorithm to decompose scattered oceanographic float measurements into large-scale and small-scale components.",
+      "doi": "10.1137/19M1268781",
+      "comment": "19 pages, 5 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2505.10894v1",
+      "title": "CTP: A hybrid CNN-Transformer-PINN model for ocean front forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2505.10894v1",
+      "authors": [
+        "Yishuo Wang",
+        "Feng Zhou",
+        "Muping Zhou",
+        "Qicheng Meng",
+        "Zhijun Hu",
+        "Yi Wang"
+      ],
+      "published": "2025-05-16",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "abstract": "This paper proposes CTP, a novel deep learning framework that integrates convolutional neural network(CNN), Transformer architectures, and physics-informed neural network(PINN) for ocean front prediction. Ocean fronts, as dynamic interfaces between distinct water masses, play critical roles in marine biogeochemical and physical processes. Existing methods such as LSTM, ConvLSTM, and AttentionConv often struggle to maintain spatial continuity and physical consistency over multi-step forecasts. CTP addresses these challenges by combining localized spatial encoding, long-range temporal attention, and physical constraint enforcement. Experimental results across south China sea(SCS) and Kuroshio(KUR) regions from 1993 to 2020 demonstrate that CTP achieves state-of-the-art(SOTA) performance in both single-step and multi-step predictions, significantly outperforming baseline models in accuracy, $F_1$ score, and temporal stability.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2105.02939v1",
+      "title": "PCE-PINNs: Physics-Informed Neural Networks for Uncertainty Propagation in Ocean Modeling",
+      "arxiv_url": "http://arxiv.org/abs/2105.02939v1",
+      "authors": [
+        "Björn Lütjens",
+        "Catherine H. Crawford",
+        "Mark Veillette",
+        "Dava Newman"
+      ],
+      "published": "2021-05-05",
+      "year": 2021,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Climate models project an uncertainty range of possible warming scenarios from 1.5 to 5 degree Celsius global temperature increase until 2100, according to the CMIP6 model ensemble. Climate risk management and infrastructure adaptation requires the accurate quantification of the uncertainties at the local level. Ensembles of high-resolution climate models could accurately quantify the uncertainties, but most physics-based climate models are computationally too expensive to run as ensemble. Recent works in physics-informed neural networks (PINNs) have combined deep learning and the physical sciences to learn up to 15k faster copies of climate submodels. However, the application of PINNs in climate modeling has so far been mostly limited to deterministic models. We leverage a novel method that combines polynomial chaos expansion (PCE), a classic technique for uncertainty propagation, with PINNs. The PCE-PINNs learn a fast surrogate model that is demonstrated for uncertainty propagation of known parameter uncertainties. We showcase the effectiveness in ocean modeling by using the local advection-diffusion equation.",
+      "doi": "",
+      "comment": "Presented at ICRL 2021 Workshop on AI for Modeling Oceans and Climate Change",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2106.08747v1",
+      "title": "Towards Optimally Weighted Physics-Informed Neural Networks in Ocean Modelling",
+      "arxiv_url": "http://arxiv.org/abs/2106.08747v1",
+      "authors": [
+        "Taco de Wolff",
+        "Hugo Carrillo",
+        "Luis Martí",
+        "Nayat Sanchez-Pi"
+      ],
+      "published": "2021-06-16",
+      "year": 2021,
+      "categories": [
+        "cs.LG",
+        "cs.NE",
+        "physics.ao-ph"
+      ],
+      "abstract": "The carbon pump of the world's ocean plays a vital role in the biosphere and climate of the earth, urging improved understanding of the functions and influences of the ocean for climate change analyses. State-of-the-art techniques are required to develop models that can capture the complexity of ocean currents and temperature flows. This work explores the benefits of using physics-informed neural networks (PINNs) for solving partial differential equations related to ocean modeling; such as the Burgers, wave, and advection-diffusion equations. We explore the trade-offs of using data vs. physical models in PINNs for solving partial differential equations. PINNs account for the deviation from physical laws in order to improve learning and generalization. We observed how the relative weight between the data and physical model in the loss function influence training results, where small data sets benefit more from the added physics information.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2308.09956v1",
+      "title": "FEM-PIKFNNs for underwater acoustic propagation induced by structural vibrations in different ocean environments",
+      "arxiv_url": "http://arxiv.org/abs/2308.09956v1",
+      "authors": [
+        "Qiang Xi",
+        "Zhuojia Fu",
+        "Wenzhi Xu",
+        "Mi-An Xue",
+        "Jinhai Zheng"
+      ],
+      "published": "2023-08-19",
+      "year": 2023,
+      "categories": [
+        "math.NA"
+      ],
+      "abstract": "In this paper, a novel hybrid method based on the finite element method (FEM) and physics-informed kernel function neural networks (PIKFNNs) is proposed and applied to the prediction of underwater acoustic propagation induced by structural vibrations in the unbounded ocean, deep ocean and shallow ocean. In the hybrid method, PIKFNNs are a class of improved shallow physics-informed neural networks (PINNs) that replace the activation functions in PINNs with the physics-informed kernel functions (PIKFs), thereby integrating prior physical information into the neural network model. Moreover, this neural network circumvents the step of embedding the governing equations into the loss function in PINNs, and requires only training on boundary data. By using the Green's functions as the PIKFs and the structural-acoustic coupling response information obtained from the FEM as boundary training data, the PIKFNNs can inherently capture the Sommerfeld radiation condition at infinity, which is naturally suitable for predicting ocean acoustic propagation. Numerical experiments demonstrate the accuracy and feasibility of the FEM-PIKFNNs in comparison with the true solutions and finite element results.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2510.17756v1",
+      "title": "Prediction of Sea Ice Velocity and Concentration in the Arctic Ocean using Physics-informed Neural Network",
+      "arxiv_url": "http://arxiv.org/abs/2510.17756v1",
+      "authors": [
+        "Younghyun Koo",
+        "Maryam Rahnemoonfar"
+      ],
+      "published": "2025-10-20",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "As an increasing amount of remote sensing data becomes available in the Arctic Ocean, data-driven machine learning (ML) techniques are becoming widely used to predict sea ice velocity (SIV) and sea ice concentration (SIC). However, fully data-driven ML models have limitations in generalizability and physical consistency due to their excessive reliance on the quantity and quality of training data. In particular, as Arctic sea ice entered a new phase with thinner ice and accelerated melting, there is a possibility that an ML model trained with historical sea ice data cannot fully represent the dynamically changing sea ice conditions in the future. In this study, we develop physics-informed neural network (PINN) strategies to integrate physical knowledge of sea ice into the ML model. Based on the Hierarchical Information-sharing U-net (HIS-Unet) architecture, we incorporate the physics loss function and the activation function to produce physically plausible SIV and SIC outputs. Our PINN model outperforms the fully data-driven model in the daily predictions of SIV and SIC, even when trained with a small number of samples. The PINN approach particularly improves SIC predictions in melting and early freezing seasons and near fast-moving ice regions.",
+      "doi": "",
+      "comment": "49 pages, 7 figures, submitted to Environmental Modelling &amp; Software",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2507.08834v1",
+      "title": "Physical Informed Neural Networks for modeling ocean pollutant",
+      "arxiv_url": "http://arxiv.org/abs/2507.08834v1",
+      "authors": [
+        "Karishma Battina",
+        "Prathamesh Dinesh Joshi",
+        "Raj Abhijit Dandekar",
+        "Rajat Dandekar",
+        "Sreedath Panat"
+      ],
+      "published": "2025-07-07",
+      "year": 2025,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Traditional numerical methods often struggle with the complexity and scale of modeling pollutant transport across vast and dynamic oceanic domains. This paper introduces a Physics-Informed Neural Network (PINN) framework to simulate the dispersion of pollutants governed by the 2D advection-diffusion equation. The model achieves physically consistent predictions by embedding physical laws and fitting to noisy synthetic data, generated via a finite difference method (FDM), directly into the neural network training process. This approach addresses challenges such as non-linear dynamics and the enforcement of boundary and initial conditions. Synthetic data sets, augmented with varying noise levels, are used to capture real-world variability. The training incorporates a hybrid loss function including PDE residuals, boundary/initial condition conformity, and a weighted data fit term. The approach takes advantage of the Julia language scientific computing ecosystem for high-performance simulations, offering a scalable and flexible alternative to traditional solvers",
+      "doi": "",
+      "comment": "13 pages, 9 figures, 3 tables",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2511.05629v1",
+      "title": "SSTODE: Ocean-Atmosphere Physics-Informed Neural ODEs for Sea Surface Temperature Prediction",
+      "arxiv_url": "http://arxiv.org/abs/2511.05629v1",
+      "authors": [
+        "Zheng Jiang",
+        "Wei Wang",
+        "Gaowei Zhang",
+        "Yi Wang"
+      ],
+      "published": "2025-11-07",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.ao-ph"
+      ],
+      "abstract": "Sea Surface Temperature (SST) is crucial for understanding upper-ocean thermal dynamics and ocean-atmosphere interactions, which have profound economic and social impacts. While data-driven models show promise in SST prediction, their black-box nature often limits interpretability and overlooks key physical processes. Recently, physics-informed neural networks have been gaining momentum but struggle with complex ocean-atmosphere dynamics due to 1) inadequate characterization of seawater movement (e.g., coastal upwelling) and 2) insufficient integration of external SST drivers (e.g., turbulent heat fluxes). To address these challenges, we propose SSTODE, a physics-informed Neural Ordinary Differential Equations (Neural ODEs) framework for SST prediction. First, we derive ODEs from fluid transport principles, incorporating both advection and diffusion to model ocean spatiotemporal dynamics. Through variational optimization, we recover a latent velocity field that explicitly governs the temporal dynamics of SST. Building upon ODE, we introduce an Energy Exchanges Integrator (EEI)-inspired by ocean heat budget equations-to account for external forcing factors. Thus, the variations in the components of these factors provide deeper insights into SST dynamics. Extensive experiments demonstrate that SSTODE achieves state-of-the-art performances in global and regional SST forecasting benchmarks. Furthermore, SSTODE visually reveals the impact of advection dynamics, thermal diffusion patterns, and diurnal heating-cooling cycles on SST evolution. These findings demonstrate the model's interpretability and physical consistency.",
+      "doi": "",
+      "comment": "To be published in the Proceedings of AAAI-AISI 2026",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2603.05560v2",
+      "title": "Towards Efficient and Stable Ocean State Forecasting: A Continuous-Time Koopman Approach",
+      "arxiv_url": "http://arxiv.org/abs/2603.05560v2",
+      "authors": [
+        "Rares Grozavescu",
+        "Pengyu Zhang",
+        "Mark Girolami",
+        "Etienne Meunier"
+      ],
+      "published": "2026-03-05",
+      "year": 2026,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.app-ph",
+        "physics.comp-ph",
+        "physics.geo-ph"
+      ],
+      "abstract": "We investigate the Continuous-Time Koopman Autoencoder (CT-KAE) as a lightweight surrogate model for long-horizon ocean state forecasting in a two-layer quasi-geostrophic (QG) system. By projecting nonlinear dynamics into a latent space governed by a linear ordinary differential equation, the model enforces structured and interpretable temporal evolution while enabling temporally resolution-invariant forecasting via a matrix exponential formulation. Across 2083-day rollouts, CT-KAE exhibits bounded error growth and stable large-scale statistics, in contrast to autoregressive Transformer baselines which exhibit gradual error amplification and energy drift over long rollouts. While fine-scale turbulent structures are partially dissipated, bulk energy spectra, enstrophy evolution, and autocorrelation structure remain consistent over long horizons. The model achieves orders-of-magnitude faster inference compared to the numerical solver, suggesting that continuous-time Koopman surrogates offer a promising backbone for efficient and stable physical-machine learning climate models.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2212.12086v2",
+      "title": "Eigenvalue initialisation and regularisation for Koopman autoencoders",
+      "arxiv_url": "http://arxiv.org/abs/2212.12086v2",
+      "authors": [
+        "Jack W. Miller",
+        "Charles O'Neill",
+        "Navid C. Constantinou",
+        "Omri Azencot"
+      ],
+      "published": "2022-12-23",
+      "year": 2022,
+      "categories": [
+        "cs.LG",
+        "math.DS"
+      ],
+      "abstract": "Regularising the parameter matrices of neural networks is ubiquitous in training deep models. Typical regularisation approaches suggest initialising weights using small random values, and to penalise weights to promote sparsity. However, these widely used techniques may be less effective in certain scenarios. Here, we study the Koopman autoencoder model which includes an encoder, a Koopman operator layer, and a decoder. These models have been designed and dedicated to tackle physics-related problems with interpretable dynamics and an ability to incorporate physics-related constraints. However, the majority of existing work employs standard regularisation practices. In our work, we take a step toward augmenting Koopman autoencoders with initialisation and penalty schemes tailored for physics-related settings. Specifically, we propose the \"eigeninit\" initialisation scheme that samples initial Koopman operators from specific eigenvalue distributions. In addition, we suggest the \"eigenloss\" penalty scheme that penalises the eigenvalues of the Koopman operator during training. We demonstrate the utility of these schemes on two synthetic data sets: a driven pendulum and flow past a cylinder; and two real-world problems: ocean surface temperatures and cyclone wind fields. We find on these datasets that eigenloss and eigeninit improves the convergence rate by up to a factor of 5, and that they reduce the cumulative long-term prediction error by up to a factor of 3. Such a finding points to the utility of incorporating similar schemes as an inductive bias in other physics-related deep learning approaches.",
+      "doi": "",
+      "comment": "18 pages",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1707.01146v4",
+      "title": "Data-driven discovery of Koopman eigenfunctions for control",
+      "arxiv_url": "http://arxiv.org/abs/1707.01146v4",
+      "authors": [
+        "Eurika Kaiser",
+        "J. Nathan Kutz",
+        "Steven L. Brunton"
+      ],
+      "published": "2017-07-04",
+      "year": 2017,
+      "categories": [
+        "math.OC",
+        "math.DS"
+      ],
+      "abstract": "Data-driven transformations that reformulate nonlinear systems in a linear framework have the potential to enable the prediction, estimation, and control of strongly nonlinear dynamics using linear systems theory. The Koopman operator has emerged as a principled linear embedding of nonlinear dynamics, and its eigenfunctions establish intrinsic coordinates along which the dynamics behave linearly. Previous studies have used finite-dimensional approximations of the Koopman operator for model-predictive control approaches. In this work, we illustrate a fundamental closure issue of this approach and argue that it is beneficial to first validate eigenfunctions and then construct reduced-order models in these validated eigenfunctions. These coordinates form a Koopman-invariant subspace by design and, thus, have improved predictive power. We show then how the control can be formulated directly in these intrinsic coordinates and discuss potential benefits and caveats of this perspective. The resulting control architecture is termed Koopman Reduced Order Nonlinear Identification and Control (KRONIC). It is demonstrated that these eigenfunctions can be approximated with data-driven regression and power series expansions, based on the partial differential equation governing the infinitesimal generator of the Koopman operator. Validating discovered eigenfunctions is crucial and we show that lightly damped eigenfunctions may be faithfully extracted from EDMD or an implicit formulation. These lightly damped eigenfunctions are particularly relevant for control, as they correspond to nearly conserved quantities that are associated with persistent dynamics, such as the Hamiltonian. KRONIC is then demonstrated on a number of relevant examples, including 1) a nonlinear system with a known linear embedding, 2) a variety of Hamiltonian systems, and 3) a high-dimensional double-gyre model for ocean mixing.",
+      "doi": "",
+      "comment": "36 pages, 16 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2010.00399v2",
+      "title": "Analyzing Koopman approaches to physics-informed machine learning for long-term sea-surface temperature forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2010.00399v2",
+      "authors": [
+        "Julian Rice",
+        "Wenwei Xu",
+        "Andrew August"
+      ],
+      "published": "2020-09-15",
+      "year": 2020,
+      "categories": [
+        "physics.geo-ph",
+        "cs.LG",
+        "physics.ao-ph",
+        "physics.comp-ph"
+      ],
+      "abstract": "Accurately predicting sea-surface temperature weeks to months into the future is an important step toward long term weather forecasting. Standard atmosphere-ocean coupled numerical models provide accurate sea-surface forecasts on the scale of a few days to a few weeks, but many important weather systems require greater foresight. In this paper we propose machine-learning approaches sea-surface temperature forecasting that are accurate on the scale of dozens of weeks. Our approach is based in Koopman operator theory, a useful tool for dynamical systems modelling. With this approach, we predict sea surface temperature in the Gulf of Mexico up to 180 days into the future based on a present image of thermal conditions and three years of historical training data. We evaluate the combination of a basic Koopman method with a convolutional autoencoder, and a newly proposed \"consistent Koopman\" method, in various permutations. We show that the Koopman approach consistently outperforms baselines, and we discuss the utility of our additional assumptions and methods in this sea-surface temperature domain.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2410.16605v1",
+      "title": "EnKode: Active Learning of Unknown Flows with Koopman Operators",
+      "arxiv_url": "http://arxiv.org/abs/2410.16605v1",
+      "authors": [
+        "Alice Kate Li",
+        "Thales C. Silva",
+        "M. Ani Hsieh"
+      ],
+      "published": "2024-10-22",
+      "year": 2024,
+      "categories": [
+        "cs.RO"
+      ],
+      "abstract": "In this letter, we address the task of adaptive sampling to model vector fields. When modeling environmental phenomena with a robot, gathering high resolution information can be resource intensive. Actively gathering data and modeling flows with the data is a more efficient alternative. However, in such scenarios, data is often sparse and thus requires flow modeling techniques that are effective at capturing the relevant dynamical features of the flow to ensure high prediction accuracy of the resulting models. To accomplish this effectively, regions with high informative value must be identified. We propose EnKode, an active sampling approach based on Koopman Operator theory and ensemble methods that can build high quality flow models and effectively estimate model uncertainty. For modeling complex flows, EnKode provides comparable or better estimates of unsampled flow regions than Gaussian Process Regression models with hyperparameter optimization. Additionally, our active sensing scheme provides more accurate flow estimates than comparable strategies that rely on uniform sampling. We evaluate EnKode using three common benchmarking systems: the Bickley Jet, Lid-Driven Cavity flow with an obstacle, and real ocean currents from the National Oceanic and Atmospheric Administration (NOAA).",
+      "doi": "",
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2409.19518v1",
+      "title": "KODA: A Data-Driven Recursive Model for Time Series Forecasting and Data Assimilation using Koopman Operators",
+      "arxiv_url": "http://arxiv.org/abs/2409.19518v1",
+      "authors": [
+        "Ashutosh Singh",
+        "Ashish Singh",
+        "Tales Imbiriba",
+        "Deniz Erdogmus",
+        "Ricardo Borsoi"
+      ],
+      "published": "2024-09-29",
+      "year": 2024,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Approaches based on Koopman operators have shown great promise in forecasting time series data generated by complex nonlinear dynamical systems (NLDS). Although such approaches are able to capture the latent state representation of a NLDS, they still face difficulty in long term forecasting when applied to real world data. Specifically many real-world NLDS exhibit time-varying behavior, leading to nonstationarity that is hard to capture with such models. Furthermore they lack a systematic data-driven approach to perform data assimilation, that is, exploiting noisy measurements on the fly in the forecasting task. To alleviate the above issues, we propose a Koopman operator-based approach (named KODA - Koopman Operator with Data Assimilation) that integrates forecasting and data assimilation in NLDS. In particular we use a Fourier domain filter to disentangle the data into a physical component whose dynamics can be accurately represented by a Koopman operator, and residual dynamics that represents the local or time varying behavior that are captured by a flexible and learnable recursive model. We carefully design an architecture and training criterion that ensures this decomposition lead to stable and long-term forecasts. Moreover, we introduce a course correction strategy to perform data assimilation with new measurements at inference time. The proposed approach is completely data-driven and can be learned end-to-end. Through extensive experimental comparisons we show that KODA outperforms existing state of the art methods on multiple time series benchmarks such as electricity, temperature, weather, lorenz 63 and duffing oscillator demonstrating its superior performance and efficacy along the three tasks a) forecasting, b) data assimilation and c) state prediction.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2603.14115v1",
+      "title": "A Lagrangian Conditional Gaussian Koopman Network for Data Assimilation and Prediction",
+      "arxiv_url": "http://arxiv.org/abs/2603.14115v1",
+      "authors": [
+        "Zhongrui Wang",
+        "Chuanqi Chen",
+        "Jin-Long Wu",
+        "Nan Chen"
+      ],
+      "published": "2026-03-14",
+      "year": 2026,
+      "categories": [
+        "cs.CE"
+      ],
+      "abstract": "Lagrangian data assimilation aims to recover hidden Eulerian flow fields from sparse, indirect observations of moving tracers. This problem is challenging because tracer trajectories are nonlinearly coupled with the underlying flow, making posterior inference computationally intractable in realistic, high-dimensional systems. In this work, we develop a Lagrangian conditional Gaussian Koopman network (LaCGKN), a structure-preserving, data-driven framework for joint data assimilation and prediction from Lagrangian observations. LaCGKN embeds Eulerian flow dynamics into a low-dimensional latent space governed by a nonlinear stochastic system with conditional Gaussian structure, enabling analytic posterior updates without ensemble forecasting. Unlike existing conditional Gaussian Koopman formulations that assume direct Eulerian observations, the Lagrangian setting imposes additional demands on the latent representation, which must simultaneously encode the flow dynamics and mediate nonlinear tracer-flow interactions. To address these challenges, the LaCGKN incorporates three key components: (i) tracer homogenization to enforce permutation equivariance and generalize across varying numbers of tracers; (ii) Fourier positional encoding to capture spatial dependence and reconstruct local flow features at moving tracer locations; and (iii) an SVD-inspired low-rank parameterization of the latent transition operator, which reduces model complexity while retaining expressiveness. An application to a two-layer quasi-geostrophic flow with surface tracer observations shows that LaCGKN achieves accurate and efficient Lagrangian data assimilation and prediction, without reliance on ensemble methods or the governing physical model. These results establish the LaCGKN as a unified and computationally tractable alternative to both traditional model-based approaches and purely black-box data-driven methods.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2309.05317v3",
+      "title": "Neural Koopman prior for data assimilation",
+      "arxiv_url": "http://arxiv.org/abs/2309.05317v3",
+      "authors": [
+        "Anthony Frion",
+        "Lucas Drumetz",
+        "Mauro Dalla Mura",
+        "Guillaume Tochon",
+        "Abdeldjalil Aïssa El Bey"
+      ],
+      "published": "2023-09-11",
+      "year": 2023,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "With the increasing availability of large scale datasets, computational power and tools like automatic differentiation and expressive neural network architectures, sequential data are now often treated in a data-driven way, with a dynamical model trained from the observation data. While neural networks are often seen as uninterpretable black-box architectures, they can still benefit from physical priors on the data and from mathematical knowledge. In this paper, we use a neural network architecture which leverages the long-known Koopman operator theory to embed dynamical systems in latent spaces where their dynamics can be described linearly, enabling a number of appealing features. We introduce methods that enable to train such a model for long-term continuous reconstruction, even in difficult contexts where the data comes in irregularly-sampled time series. The potential for self-supervised learning is also demonstrated, as we show the promising use of trained dynamical models as priors for variational data assimilation techniques, with applications to e.g. time series interpolation and forecasting.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2206.13659v1",
+      "title": "Data Assimilation in Operator Algebras",
+      "arxiv_url": "http://arxiv.org/abs/2206.13659v1",
+      "authors": [
+        "David Freeman",
+        "Dimitrios Giannakis",
+        "Brian Mintz",
+        "Abbas Ourmazd",
+        "Joanna Slawinska"
+      ],
+      "published": "2022-06-27",
+      "year": 2022,
+      "categories": [
+        "math.ST",
+        "math.DS",
+        "nlin.CD",
+        "physics.data-an",
+        "quant-ph"
+      ],
+      "abstract": "We develop an algebraic framework for sequential data assimilation of partially observed dynamical systems. In this framework, Bayesian data assimilation is embedded in a non-abelian operator algebra, which provides a representation of observables by multiplication operators and probability densities by density operators (quantum states). In the algebraic approach, the forecast step of data assimilation is represented by a quantum operation induced by the Koopman operator of the dynamical system. Moreover, the analysis step is described by a quantum effect, which generalizes the Bayesian observational update rule. Projecting this formulation to finite-dimensional matrix algebras leads to new computational data assimilation schemes that are (i) automatically positivity-preserving; and (ii) amenable to consistent data-driven approximation using kernel methods for machine learning. Moreover, these methods are natural candidates for implementation on quantum computers. Applications to data assimilation of the Lorenz 96 multiscale system and the El Nino Southern Oscillation in a climate model show promising results in terms of forecast skill and uncertainty quantification.",
+      "doi": "10.1073/pnas.2211115120",
+      "comment": "46 pages, 4 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2507.08749v1",
+      "title": "Modeling Partially Observed Nonlinear Dynamical Systems and Efficient Data Assimilation via Discrete-Time Conditional Gaussian Koopman Network",
+      "arxiv_url": "http://arxiv.org/abs/2507.08749v1",
+      "authors": [
+        "Chuanqi Chen",
+        "Zhongrui Wang",
+        "Nan Chen",
+        "Jin-Long Wu"
+      ],
+      "published": "2025-07-11",
+      "year": 2025,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "A discrete-time conditional Gaussian Koopman network (CGKN) is developed in this work to learn surrogate models that can perform efficient state forecast and data assimilation (DA) for high-dimensional complex dynamical systems, e.g., systems governed by nonlinear partial differential equations (PDEs). Focusing on nonlinear partially observed systems that are common in many engineering and earth science applications, this work exploits Koopman embedding to discover a proper latent representation of the unobserved system states, such that the dynamics of the latent states are conditional linear, i.e., linear with the given observed system states. The modeled system of the observed and latent states then becomes a conditional Gaussian system, for which the posterior distribution of the latent states is Gaussian and can be efficiently evaluated via analytical formulae. The analytical formulae of DA facilitate the incorporation of DA performance into the learning process of the modeled system, which leads to a framework that unifies scientific machine learning (SciML) and data assimilation. The performance of discrete-time CGKN is demonstrated on several canonical problems governed by nonlinear PDEs with intermittency and turbulent features, including the viscous Burgers' equation, the Kuramoto-Sivashinsky equation, and the 2-D Navier-Stokes equations, with which we show that the discrete-time CGKN framework achieves comparable performance as the state-of-the-art SciML methods in state forecast and provides efficient and accurate DA results. The discrete-time CGKN framework also serves as an example to illustrate unifying the development of SciML models and their other outer-loop applications such as design optimization, inverse problems, and optimal control.",
+      "doi": "10.1016/j.cma.2025.118189",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2310.00813v2",
+      "title": "OceanNet: A principled neural operator-based digital twin for regional oceans",
+      "arxiv_url": "http://arxiv.org/abs/2310.00813v2",
+      "authors": [
+        "Ashesh Chattopadhyay",
+        "Michael Gray",
+        "Tianning Wu",
+        "Anna B. Lowe",
+        "Ruoying He"
+      ],
+      "published": "2023-10-01",
+      "year": 2023,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "nlin.CD",
+        "physics.ao-ph"
+      ],
+      "abstract": "While data-driven approaches demonstrate great potential in atmospheric modeling and weather forecasting, ocean modeling poses distinct challenges due to complex bathymetry, land, vertical structure, and flow non-linearity. This study introduces OceanNet, a principled neural operator-based digital twin for ocean circulation. OceanNet uses a Fourier neural operator and predictor-evaluate-corrector integration scheme to mitigate autoregressive error growth and enhance stability over extended time scales. A spectral regularizer counteracts spectral bias at smaller scales. OceanNet is applied to the northwest Atlantic Ocean western boundary current (the Gulf Stream), focusing on the task of seasonal prediction for Loop Current eddies and the Gulf Stream meander. Trained using historical sea surface height (SSH) data, OceanNet demonstrates competitive forecast skill by outperforming SSH predictions by an uncoupled, state-of-the-art dynamical ocean model forecast, reducing computation by 500,000 times. These accomplishments demonstrate the potential of physics-inspired deep neural operators as cost-effective alternatives to high-resolution numerical ocean models.",
+      "doi": "",
+      "comment": "Supplementary information can be found in: https://drive.google.com/file/d/1NoxJLa967naJT787a5-IfZ7f_MmRuZMP/view?usp=sharing",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2305.11913v2",
+      "title": "Machine learning for phase-resolved reconstruction of nonlinear ocean wave surface elevations from sparse remote sensing data",
+      "arxiv_url": "http://arxiv.org/abs/2305.11913v2",
+      "authors": [
+        "Svenja Ehlers",
+        "Marco Klein",
+        "Alexander Heinlein",
+        "Mathies Wedler",
+        "Nicolas Desmars",
+        "Norbert Hoffmann",
+        "Merten Stender"
+      ],
+      "published": "2023-05-18",
+      "year": 2023,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Accurate short-term predictions of phase-resolved water wave conditions are crucial for decision-making in ocean engineering. However, the initialization of remote-sensing-based wave prediction models first requires a reconstruction of wave surfaces from sparse measurements like radar. Existing reconstruction methods either rely on computationally intensive optimization procedures or simplistic modelling assumptions that compromise the real-time capability or accuracy of the subsequent prediction process. We therefore address these issues by proposing a novel approach for phase-resolved wave surface reconstruction using neural networks based on the U-Net and Fourier neural operator (FNO) architectures. Our approach utilizes synthetic yet highly realistic training data on uniform one-dimensional grids, that is generated by the high-order spectral method for wave simulation and a geometric radar modelling approach. The investigation reveals that both models deliver accurate wave reconstruction results and show good generalization for different sea states when trained with spatio-temporal radar data containing multiple historic radar snapshots in each input. Notably, the FNO demonstrates superior performance in handling the data structure imposed by wave physics due to its global approach to learn the mapping between input and output in Fourier space.",
+      "doi": "10.1016/j.oceaneng.2023.116059",
+      "comment": "19 pages, 13 figures (without appendix), final version",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2310.02691v2",
+      "title": "Robust Ocean Subgrid-Scale Parameterizations Using Fourier Neural Operators",
+      "arxiv_url": "http://arxiv.org/abs/2310.02691v2",
+      "authors": [
+        "Victor Mangeleer",
+        "Gilles Louppe"
+      ],
+      "published": "2023-10-04",
+      "year": 2023,
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph"
+      ],
+      "abstract": "In climate simulations, small-scale processes shape ocean dynamics but remain computationally expensive to resolve directly. For this reason, their contributions are commonly approximated using empirical parameterizations, which lead to significant errors in long-term projections. In this work, we develop parameterizations based on Fourier Neural Operators, showcasing their accuracy and generalizability in comparison to other approaches. Finally, we discuss the potential and limitations of neural networks operating in the frequency domain, paving the way for future investigation.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2404.05768v2",
+      "title": "Streamlining Ocean Dynamics Modeling with Fourier Neural Operators: A Multiobjective Hyperparameter and Architecture Optimization Approach",
+      "arxiv_url": "http://arxiv.org/abs/2404.05768v2",
+      "authors": [
+        "Yixuan Sun",
+        "Ololade Sowunmi",
+        "Romain Egele",
+        "Sri Hari Krishna Narayanan",
+        "Luke Van Roekel",
+        "Prasanna Balaprakash"
+      ],
+      "published": "2024-04-07",
+      "year": 2024,
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph",
+        "stat.ML"
+      ],
+      "abstract": "Training an effective deep learning model to learn ocean processes involves careful choices of various hyperparameters. We leverage the advanced search algorithms for multiobjective optimization in DeepHyper, a scalable hyperparameter optimization software, to streamline the development of neural networks tailored for ocean modeling. The focus is on optimizing Fourier neural operators (FNOs), a data-driven model capable of simulating complex ocean behaviors. Selecting the correct model and tuning the hyperparameters are challenging tasks, requiring much effort to ensure model accuracy. DeepHyper allows efficient exploration of hyperparameters associated with data preprocessing, FNO architecture-related hyperparameters, and various model training strategies. We aim to obtain an optimal set of hyperparameters leading to the most performant model. Moreover, on top of the commonly used mean squared error for model training, we propose adopting the negative anomaly correlation coefficient as the additional loss term to improve model performance and investigate the potential trade-off between the two terms. The experimental results show that the optimal set of hyperparameters enhanced model performance in single timestepping forecasting and greatly exceeded the baseline configuration in the autoregressive rollout for long-horizon forecasting up to 30 days. Utilizing DeepHyper, we demonstrate an approach to enhance the use of FNOs in ocean dynamics forecasting, offering a scalable solution with improved precision.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2311.12902v2",
+      "title": "Enhancing Solutions for Complex PDEs: Introducing Complementary Convolution and Equivariant Attention in Fourier Neural Operators",
+      "arxiv_url": "http://arxiv.org/abs/2311.12902v2",
+      "authors": [
+        "Xuanle Zhao",
+        "Yue Sun",
+        "Tielin Zhang",
+        "Bo Xu"
+      ],
+      "published": "2023-11-21",
+      "year": 2023,
+      "categories": [
+        "cs.LG",
+        "math.DS",
+        "math.NA"
+      ],
+      "abstract": "Neural operators improve conventional neural networks by expanding their capabilities of functional mappings between different function spaces to solve partial differential equations (PDEs). One of the most notable methods is the Fourier Neural Operator (FNO), which draws inspiration from Green's function method and directly approximates operator kernels in the frequency domain. However, after empirical observation followed by theoretical validation, we demonstrate that the FNO approximates kernels primarily in a relatively low-frequency domain. This suggests a limited capability in solving complex PDEs, particularly those characterized by rapid coefficient changes and oscillations in the solution space. Such cases are crucial in specific scenarios, like atmospheric convection and ocean circulation. To address this challenge, inspired by the translation equivariant of the convolution kernel, we propose a novel hierarchical Fourier neural operator along with convolution-residual layers and attention mechanisms to make them complementary in the frequency domain to solve complex PDEs. We perform experiments on forward and reverse problems of multiscale elliptic equations, Navier-Stokes equations, and other physical scenarios, and find that the proposed method achieves superior performance in these PDE benchmarks, especially for equations characterized by rapid coefficient variations.",
+      "doi": "",
+      "comment": "14 pages, 5 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2510.09792v1",
+      "title": "Principled Operator Learning in Ocean Dynamics: The Role of Temporal Structure",
+      "arxiv_url": "http://arxiv.org/abs/2510.09792v1",
+      "authors": [
+        "Vahidreza Jahanmard",
+        "Ali Ramezani-Kebrya",
+        "Robinson Hordoir"
+      ],
+      "published": "2025-10-10",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph"
+      ],
+      "abstract": "Neural operators are becoming the default tools to learn solutions to governing partial differential equations (PDEs) in weather and ocean forecasting applications. Despite early promising achievements, significant challenges remain, including long-term prediction stability and adherence to physical laws, particularly for high-frequency processes. In this paper, we take a step toward addressing these challenges in high-resolution ocean prediction by incorporating temporal Fourier modes, demonstrating how this modification enhances physical fidelity. This study compares the standard Fourier Neural Operator (FNO) with its variant, FNOtD, which has been modified to internalize the dispersion relation while learning the solution operator for ocean PDEs. The results demonstrate that entangling space and time in the training of integral kernels enables the model to capture multiscale wave propagation and effectively learn ocean dynamics. FNOtD substantially improves long-term prediction stability and consistency with underlying physical dynamics in challenging high-frequency settings compared to the standard FNO. It also provides competitive predictive skill relative to a state-of-the-art numerical ocean model, while requiring significantly lower computational cost.",
+      "doi": "",
+      "comment": "Accepted at NeurIPS ML4PS 2025",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2601.01813v1",
+      "title": "Spatio-temporal modeling and forecasting with Fourier neural operators",
+      "arxiv_url": "http://arxiv.org/abs/2601.01813v1",
+      "authors": [
+        "Pratik Nag",
+        "Andrew Zammit-Mangion",
+        "Sumeetpal Singh",
+        "Noel Cressie"
+      ],
+      "published": "2026-01-05",
+      "year": 2026,
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ],
+      "abstract": "Spatio-temporal process models are often used for modeling dynamic physical and biological phenomena that evolve across space and time. These phenomena may exhibit environmental heterogeneity and complex interactions that are difficult to capture using traditional statistical process models such as Gaussian processes. This work proposes the use of Fourier neural operators (FNOs) for constructing statistical dynamical spatio-temporal models for forecasting. An FNO is a flexible mapping of functions that approximates the solution operator of possibly unknown linear or non-linear partial differential equations (PDEs) in a computationally efficient manner. It does so using samples of inputs and their respective outputs, and hence explicit knowledge of the underlying PDE is not required. Through simulations from a nonlinear PDE with known solution, we compare FNO forecasts to those from state-of-the-art statistical spatio-temporal-forecasting methods. Further, using sea surface temperature data over the Atlantic Ocean and precipitation data across Europe, we demonstrate the ability of FNO-based dynamic spatio-temporal (DST) statistical modeling to capture complex real-world spatio-temporal dependencies. Using collections of testing instances, we show that the FNO-DST forecasts are accurate with valid uncertainty quantification.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2110.07100v1",
+      "title": "Digital Twin Earth -- Coasts: Developing a fast and physics-informed surrogate model for coastal floods via neural operators",
+      "arxiv_url": "http://arxiv.org/abs/2110.07100v1",
+      "authors": [
+        "Peishi Jiang",
+        "Nis Meinert",
+        "Helga Jordão",
+        "Constantin Weisser",
+        "Simon Holgate",
+        "Alexander Lavin",
+        "Björn Lütjens",
+        "Dava Newman",
+        "Haruko Wainwright",
+        "Catherine Walker",
+        "Patrick Barnard"
+      ],
+      "published": "2021-10-14",
+      "year": 2021,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "Developing fast and accurate surrogates for physics-based coastal and ocean models is an urgent need due to the coastal flood risk under accelerating sea level rise, and the computational expense of deterministic numerical models. For this purpose, we develop the first digital twin of Earth coastlines with new physics-informed machine learning techniques extending the state-of-art Neural Operator. As a proof-of-concept study, we built Fourier Neural Operator (FNO) surrogates on the simulations of an industry-standard flood and ocean model (NEMO). The resulting FNO surrogate accurately predicts the sea surface height in most regions while achieving upwards of 45x acceleration of NEMO. We delivered an open-source \\textit{CoastalTwin} platform in an end-to-end and modular way, to enable easy extensions to other simulations and ML-based surrogate methods. Our results and deliverable provide a promising approach to massively accelerate coastal dynamics simulators, which can enable scientists to efficiently execute many simulations for decision-making, uncertainty quantification, and other research activities.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2202.09967v1",
+      "title": "A Deep Learning Model for Forecasting Global Monthly Mean Sea Surface Temperature Anomalies",
+      "arxiv_url": "http://arxiv.org/abs/2202.09967v1",
+      "authors": [
+        "John Taylor",
+        "Ming Feng"
+      ],
+      "published": "2022-02-21",
+      "year": 2022,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG"
+      ],
+      "abstract": "Sea surface temperature (SST) variability plays a key role in the global weather and climate system, with phenomena such as El Niño-Southern Oscillation regarded as a major source of interannual climate variability at the global scale. The ability to be able to make long-range forecasts of sea surface temperature anomalies, especially those associated with extreme marine heatwave events, has potentially significant economic and societal benefits. We have developed a deep learning time series prediction model (Unet-LSTM) based on more than 70 years (1950-2021) of ECMWF ERA5 monthly mean sea surface temperature and 2-metre air temperature data. The Unet-LSTM model is able to learn the underlying physics driving the temporal evolution of the 2-dimensional global sea surface temperatures. The model accurately predicts sea surface temperatures over a 24 month period with a root mean square error remaining below 0.75$^\\circ$C for all predicted months. We have also investigated the ability of the model to predict sea surface temperature anomalies in the Niño3.4 region, as well as a number of marine heatwave hot spots over the past decade. Model predictions of the Niño3.4 index allow us to capture the strong 2010-11 La Niña, 2009-10 El Nino and the 2015-16 extreme El Niño up to 24 months in advance. It also shows long lead prediction skills for the northeast Pacific marine heatwave, the Blob. However, the prediction of the marine heatwaves in the southeast Indian Ocean, the Ningaloo Niño, shows limited skill. These results indicate the significant potential of data driven methods to yield long-range predictions of sea surface temperature anomalies.",
+      "doi": "",
+      "comment": "31 pages, 15 Figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2305.09468v1",
+      "title": "Graph-Based Deep Learning for Sea Surface Temperature Forecasts",
+      "arxiv_url": "http://arxiv.org/abs/2305.09468v1",
+      "authors": [
+        "Ding Ning",
+        "Varvara Vetrova",
+        "Karin R. Bryan"
+      ],
+      "published": "2023-04-03",
+      "year": 2023,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "abstract": "Sea surface temperature (SST) forecasts help with managing the marine ecosystem and the aquaculture impacted by anthropogenic climate change. Numerical dynamical models are resource intensive for SST forecasts; machine learning (ML) models could reduce high computational requirements and have been in the focus of the research community recently. ML models normally require a large amount of data for training. Environmental data are collected on regularly-spaced grids, so early work mainly used grid-based deep learning (DL) for prediction. However, both grid data and the corresponding DL approaches have inherent problems. As geometric DL has emerged, graphs as a more generalized data structure and graph neural networks (GNNs) have been introduced to the spatiotemporal domains. In this work, we preliminarily explored graph re-sampling and GNNs for global SST forecasts, and GNNs show better one month ahead SST prediction than the persistence model in most oceans in terms of root mean square errors.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2409.05369v1",
+      "title": "CAS-Canglong: A skillful 3D Transformer model for sub-seasonal to seasonal global sea surface temperature prediction",
+      "arxiv_url": "http://arxiv.org/abs/2409.05369v1",
+      "authors": [
+        "Longhao Wang",
+        "Xuanze Zhang",
+        "L. Ruby Leung",
+        "Francis H. S. Chiew",
+        "Amir AghaKouchak",
+        "Kairan Ying",
+        "Yongqiang Zhang"
+      ],
+      "published": "2024-09-09",
+      "year": 2024,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "Accurate prediction of global sea surface temperature at sub-seasonal to seasonal (S2S) timescale is critical for drought and flood forecasting, as well as for improving disaster preparedness in human society. Government departments or academic studies normally use physics-based numerical models to predict S2S sea surface temperature and corresponding climate indices, such as El Niño-Southern Oscillation. However, these models are hampered by computational inefficiencies, limited retention of ocean-atmosphere initial conditions, and significant uncertainty and biases. Here, we introduce a novel three-dimensional deep learning neural network to model the nonlinear and complex coupled atmosphere-ocean weather systems. This model incorporates climatic and temporal features and employs a self-attention mechanism to enhance the prediction of global S2S sea surface temperature pattern. Compared to the physics-based models, it shows significant computational efficiency and predictive capability, improving one to three months sea surface temperature predictive skill by 13.7% to 77.1% in seven ocean regions with dominant influence on S2S variability over land. This achievement underscores the significant potential of deep learning for largely improving forecasting skills at the S2S scale over land.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2412.03413v2",
+      "title": "Deep Learning for Sea Surface Temperature Reconstruction under Cloud Occlusion",
+      "arxiv_url": "http://arxiv.org/abs/2412.03413v2",
+      "authors": [
+        "Andrea Asperti",
+        "Ali Aydogdu",
+        "Angelo Greco",
+        "Fabio Merizzi",
+        "Pietro Miraglio",
+        "Beniamino Tartufoli",
+        "Alessandro Testa",
+        "Nadia Pinardi",
+        "Paolo Oddo"
+      ],
+      "published": "2024-12-04",
+      "year": 2024,
+      "categories": [
+        "cs.CV"
+      ],
+      "abstract": "Sea Surface Temperature (SST) reconstructions from satellite images affected by cloud gaps have been extensively documented in the past three decades. Here we describe several Machine Learning models to fill the cloud-occluded areas starting from MODIS Aqua nighttime L3 images. To tackle this challenge, we employed a type of Convolutional Neural Network model (U-net) to reconstruct cloud-covered portions of satellite imagery while preserving the integrity of observed values in cloud-free areas. We demonstrate the outstanding precision of U-net with respect to available products done using OI interpolation algorithms. Our best-performing architecture show 50% lower root mean square errors over established gap-filling methods.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2510.25563v1",
+      "title": "Leveraging an Atmospheric Foundational Model for Subregional Sea Surface Temperature Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2510.25563v1",
+      "authors": [
+        "Víctor Medina",
+        "Giovanny A. Cuervo-Londoño",
+        "Javier Sánchez"
+      ],
+      "published": "2025-10-29",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.ao-ph"
+      ],
+      "abstract": "The accurate prediction of oceanographic variables is crucial for understanding climate change, managing marine resources, and optimizing maritime activities. Traditional ocean forecasting relies on numerical models; however, these approaches face limitations in terms of computational cost and scalability. In this study, we adapt Aurora, a foundational deep learning model originally designed for atmospheric forecasting, to predict sea surface temperature (SST) in the Canary Upwelling System. By fine-tuning this model with high-resolution oceanographic reanalysis data, we demonstrate its ability to capture complex spatiotemporal patterns while reducing computational demands. Our methodology involves a staged fine-tuning process, incorporating latitude-weighted error metrics and optimizing hyperparameters for efficient learning. The experimental results show that the model achieves a low RMSE of 0.119K, maintaining high anomaly correlation coefficients (ACC $\\approx 0.997$). The model successfully reproduces large-scale SST structures but faces challenges in capturing finer details in coastal regions. This work contributes to the field of data-driven ocean forecasting by demonstrating the feasibility of using deep learning models pre-trained in different domains for oceanic applications. Future improvements include integrating additional oceanographic variables, increasing spatial resolution, and exploring physics-informed neural networks to enhance interpretability and understanding. These advancements can improve climate modeling and ocean prediction accuracy, supporting decision-making in environmental and economic sectors.",
+      "doi": "",
+      "comment": "18 pages, 9 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2408.12632v1",
+      "title": "Generative Diffusion Model-based Downscaling of Observed Sea Surface Height over Kuroshio Extension since 2000",
+      "arxiv_url": "http://arxiv.org/abs/2408.12632v1",
+      "authors": [
+        "Qiuchang Han",
+        "Xingliang Jiang",
+        "Yang Zhao",
+        "Xudong Wang",
+        "Zhijin Li",
+        "Renhe Zhang"
+      ],
+      "published": "2024-08-22",
+      "year": 2024,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI"
+      ],
+      "abstract": "Satellite altimetry has been widely utilized to monitor global sea surface dynamics, enabling investigation of upper ocean variability from basin-scale to localized eddy ranges. However, the sparse spatial resolution of observational altimetry limits our understanding of oceanic submesoscale variability, prevalent at horizontal scales below 0.25o resolution. Here, we introduce a state-of-the-art generative diffusion model to train high-resolution sea surface height (SSH) reanalysis data and demonstrate its advantage in observational SSH downscaling over the eddy-rich Kuroshio Extension region. The diffusion-based model effectively downscales raw satellite-interpolated data from 0.25o resolution to 1/16o, corresponding to approximately 12-km wavelength. This model outperforms other high-resolution reanalysis datasets and neural network-based methods. Also, it successfully reproduces the spatial patterns and power spectra of satellite along-track observations. Our diffusion-based results indicate that eddy kinetic energy at horizontal scales less than 250 km has intensified significantly since 2004 in the Kuroshio Extension region. These findings underscore the great potential of deep learning in reconstructing satellite altimetry and enhancing our understanding of ocean dynamics at eddy scales.",
+      "doi": "",
+      "comment": "28 pages, 7 figures, and 1 table",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2005.01090v1",
+      "title": "Filtering Internal Tides From Wide-Swath Altimeter Data Using Convolutional Neural Networks",
+      "arxiv_url": "http://arxiv.org/abs/2005.01090v1",
+      "authors": [
+        "Redouane Lguensat",
+        "Ronan Fablet",
+        "Julien Le Sommer",
+        "Sammy Metref",
+        "Emmanuel Cosme",
+        "Kaouther Ouenniche",
+        "Lucas Drumetz",
+        "Jonathan Gula"
+      ],
+      "published": "2020-05-03",
+      "year": 2020,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG",
+        "eess.IV",
+        "eess.SP"
+      ],
+      "abstract": "The upcoming Surface Water Ocean Topography (SWOT) satellite altimetry mission is expected to yield two-dimensional high-resolution measurements of Sea Surface Height (SSH), thus allowing for a better characterization of the mesoscale and submesoscale eddy field. However, to fulfill the promises of this mission, filtering the tidal component of the SSH measurements is necessary. This challenging problem is crucial since the posterior studies done by physical oceanographers using SWOT data will depend heavily on the selected filtering schemes. In this paper, we cast this problem into a supervised learning framework and propose the use of convolutional neural networks (ConvNets) to estimate fields free of internal tide signals. Numerical experiments based on an advanced North Atlantic simulation of the ocean circulation (eNATL60) show that our ConvNet considerably reduces the imprint of the internal waves in SSH data even in regions unseen by the neural network. We also investigate the relevance of considering additional data from other sea surface variables such as sea surface temperature (SST).",
+      "doi": "",
+      "comment": "Accepted for publication in IEEE IGARSS 2020 conference",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2206.12746v1",
+      "title": "Modeling Oceanic Variables with Dynamic Graph Neural Networks",
+      "arxiv_url": "http://arxiv.org/abs/2206.12746v1",
+      "authors": [
+        "Caio F. D. Netto",
+        "Marcel R. de Barros",
+        "Jefferson F. Coelho",
+        "Lucas P. de Freitas",
+        "Felipe M. Moreno",
+        "Marlon S. Mathias",
+        "Marcelo Dottori",
+        "Fábio G. Cozman",
+        "Anna H. R. Costa",
+        "Edson S. Gomi",
+        "Eduardo A. Tannuri"
+      ],
+      "published": "2022-06-25",
+      "year": 2022,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Researchers typically resort to numerical methods to understand and predict ocean dynamics, a key task in mastering environmental phenomena. Such methods may not be suitable in scenarios where the topographic map is complex, knowledge about the underlying processes is incomplete, or the application is time critical. On the other hand, if ocean dynamics are observed, they can be exploited by recent machine learning methods. In this paper we describe a data-driven method to predict environmental variables such as current velocity and sea surface height in the region of Santos-Sao Vicente-Bertioga Estuarine System in the southeastern coast of Brazil. Our model exploits both temporal and spatial inductive biases by joining state-of-the-art sequence models (LSTM and Transformers) and relational models (Graph Neural Networks) in an end-to-end framework that learns both the temporal features and the spatial relationship shared among observation sites. We compare our results with the Santos Operational Forecasting System (SOFS). Experiments show that better results are attained by our model, while maintaining flexibility and little domain knowledge dependency.",
+      "doi": "",
+      "comment": "8 pages",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2310.04540v1",
+      "title": "Multi-decadal Sea Level Prediction using Neural Networks and Spectral Clustering on Climate Model Large Ensembles and Satellite Altimeter Data",
+      "arxiv_url": "http://arxiv.org/abs/2310.04540v1",
+      "authors": [
+        "Saumya Sinha",
+        "John Fasullo",
+        "R. Steven Nerem",
+        "Claire Monteleoni"
+      ],
+      "published": "2023-10-06",
+      "year": 2023,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Sea surface height observations provided by satellite altimetry since 1993 show a rising rate (3.4 mm/year) for global mean sea level. While on average, sea level has risen 10 cm over the last 30 years, there is considerable regional variation in the sea level change. Through this work, we predict sea level trends 30 years into the future at a 2-degree spatial resolution and investigate the future patterns of the sea level change. We show the potential of machine learning (ML) in this challenging application of long-term sea level forecasting over the global ocean. Our approach incorporates sea level data from both altimeter observations and climate model simulations. We develop a supervised learning framework using fully connected neural networks (FCNNs) that can predict the sea level trend based on climate model projections. Alongside this, our method provides uncertainty estimates associated with the ML prediction. We also show the effectiveness of partitioning our spatial dataset and learning a dedicated ML model for each segmented region. We compare two partitioning strategies: one achieved using domain knowledge, and the other employing spectral clustering. Our results demonstrate that segmenting the spatial dataset with spectral clustering improves the ML predictions.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2404.14757v3",
+      "title": "SST: Multi-Scale Hybrid Mamba-Transformer Experts for Time Series Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2404.14757v3",
+      "authors": [
+        "Xiongxiao Xu",
+        "Canyu Chen",
+        "Yueqing Liang",
+        "Baixiang Huang",
+        "Guangji Bai",
+        "Liang Zhao",
+        "Kai Shu"
+      ],
+      "published": "2024-04-23",
+      "year": 2024,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Time series forecasting has made significant advances, including with Transformer-based models. The attention mechanism in Transformer effectively captures temporal dependencies by attending to all past inputs simultaneously. However, its quadratic complexity with respect to sequence length limits the scalability for long-range modeling. Recent state space models (SSMs) such as Mamba offer a promising alternative by achieving linear complexity without attention. Yet, Mamba compresses historical information into a fixed-size latent state, potentially causing information loss and limiting representational effectiveness. This raises a key research question: Can we design a hybrid Mamba-Transformer architecture that is both effective and efficient for time series forecasting? To address it, we adapt a hybrid Mamba-Transformer architecture Mambaformer, originally proposed for language modeling, to the time series domain. Preliminary experiments reveal that naively stacking Mamba and Transformer layers in Mambaformer is suboptimal for time series forecasting, due to an information interference problem. To mitigate this issue, we introduce a new time series decomposition strategy that separates time series into long-range patterns and short-range variations. Then we show that Mamba excels at capturing long-term structures, while Transformer is more effective at modeling short-term dynamics. Building on this insight, we propose State Space Transformer (SST), a multi-scale hybrid model with expert modules: a Mamba expert for long-range patterns and a Transformer expert for short-term variations. SST also employs a multi-scale patching mechanism to adaptively adjust time series resolution: low resolution for long-term patterns and high resolution for short-term variations. Experiments show that SST obtains SOTA performance with linear scalability. The code is at https://github.com/XiongxiaoXu/SST.",
+      "doi": "",
+      "comment": "CIKM 2025",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2601.01864v1",
+      "title": "Extending SST Anomaly Forecasts Through Simultaneous Decomposition of Seasonal and PDO Modes",
+      "arxiv_url": "http://arxiv.org/abs/2601.01864v1",
+      "authors": [
+        "Rameshan Kallummal"
+      ],
+      "published": "2026-01-05",
+      "year": 2026,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "We present a new approach to forecasting North Pacific Sea Surface Temperatures (SST) by recognizing that interannual variability primarily reflects amplitude changes in four dominant seasonal cycles. Our multivariate linear model simultaneously captures these amplitude-modulated seasonal cycles along with the Pacific Decadal Oscillation (PDO), which naturally emerges as an intrinsic feature of the system rather than a separate phenomenon. Using sixteen-dimensional regression based on four spatially distributed time series per variable, the model delivers unprecedented forecast accuracy for both interannual amplitude modulations and PDO evolution, maintaining skill beyond 36 months -- a substantial improvement over current operational and research forecasts, including machine learning methods. Predictions initialized in 2024 project that the PDO will remain in its negative phase through late 2026, implying reduced likelihood of severe marine heatwaves in the eastern North Pacific during this period. These findings have direct implications for regional climate impacts, including storm tracks, precipitation patterns, and marine ecosystem health. By treating seasonal and interannual variability as coupled rather than independent processes, this framework advances our understanding of North Pacific climate dynamics and provides a powerful tool for stakeholders managing climate-sensitive resources and planning adaptation strategies in regions strongly influenced by North Pacific conditions.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2408.06262v1",
+      "title": "DUNE: A Machine Learning Deep UNet++ based Ensemble Approach to Monthly, Seasonal and Annual Climate Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2408.06262v1",
+      "authors": [
+        "Pratik Shukla",
+        "Milton Halem"
+      ],
+      "published": "2024-08-12",
+      "year": 2024,
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph"
+      ],
+      "abstract": "Capitalizing on the recent availability of ERA5 monthly averaged long-term data records of mean atmospheric and climate fields based on high-resolution reanalysis, deep-learning architectures offer an alternative to physics-based daily numerical weather predictions for subseasonal to seasonal (S2S) and annual means. A novel Deep UNet++-based Ensemble (DUNE) neural architecture is introduced, employing multi-encoder-decoder structures with residual blocks. When initialized from a prior month or year, this architecture produced the first AI-based global monthly, seasonal, or annual mean forecast of 2-meter temperatures (T2m) and sea surface temperatures (SST). ERA5 monthly mean data is used as input for T2m over land, SST over oceans, and solar radiation at the top of the atmosphere for each month of 40 years to train the model. Validation forecasts are performed for an additional two years, followed by five years of forecast evaluations to account for natural annual variability. AI-trained inference forecast weights generate forecasts in seconds, enabling ensemble seasonal forecasts. Root Mean Squared Error (RMSE), Anomaly Correlation Coefficient (ACC), and Heidke Skill Score (HSS) statistics are presented globally and over specific regions. These forecasts outperform persistence, climatology, and multiple linear regression for all domains. DUNE forecasts demonstrate comparable statistical accuracy to NOAA's operational monthly and seasonal probabilistic outlook forecasts over the US but at significantly higher resolutions. RMSE and ACC error statistics for other recent AI-based daily forecasts also show superior performance for DUNE-based forecasts. The DUNE model's application to an ensemble data assimilation cycle shows comparable forecast accuracy with a single high-resolution model, potentially eliminating the need for retraining on extrapolated datasets.",
+      "doi": "",
+      "comment": "Excluding Appendix: 18 pages, 14 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1909.08573v2",
+      "title": "Statistical and machine learning ensemble modelling to forecast sea surface temperature",
+      "arxiv_url": "http://arxiv.org/abs/1909.08573v2",
+      "authors": [
+        "Stefan Wolff",
+        "Fearghal O'Donncha",
+        "Bei Chen"
+      ],
+      "published": "2019-09-18",
+      "year": 2019,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG"
+      ],
+      "abstract": "In situ and remotely sensed observations have potential to facilitate data-driven predictive models for oceanography. A suite of machine learning models, including regression, decision tree and deep learning approaches were developed to estimate sea surface temperatures (SST). Training data consisted of satellite-derived SST and atmospheric data from The Weather Company. Models were evaluated in terms of accuracy and computational complexity. Predictive skill were assessed against observations and a state-of-the-art, physics-based model from the European Centre for Medium Weather Forecasting. Results demonstrated that by combining automated feature engineering with machine-learning approaches, accuracy comparable to existing state-of-the-art can be achieved. Models captured seasonal patterns in the data and qualitatively reproduce short-term variations driven by atmospheric forcing. Further, it demonstrated that machine-learning-based approaches can be used as transportable prediction tools for ocean variables -- the data-driven nature of the approach naturally integrates with automatic deployment frameworks, where model deployments are guided by data rather than user-parametrisation and expertise. The low computational cost of inference makes the approach particularly attractive for edge-based computing where predictive models could be deployed on low-power devices in the marine environment.",
+      "doi": "10.1016/j.jmarsys.2020.103347",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2505.10191v1",
+      "title": "LanTu: Dynamics-Enhanced Deep Learning for Eddy-Resolving Ocean Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2505.10191v1",
+      "authors": [
+        "Qingyu Zheng",
+        "Qi Shao",
+        "Guijun Han",
+        "Wei Li",
+        "Hong Li",
+        "Xuan Wang"
+      ],
+      "published": "2025-05-15",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG",
+        "nlin.CD"
+      ],
+      "abstract": "Mesoscale eddies dominate the spatiotemporal multiscale variability of the ocean, and their impact on the energy cascade of the global ocean cannot be ignored. Eddy-resolving ocean forecasting is providing more reliable protection for fisheries and navigational safety, but also presents significant scientific challenges and high computational costs for traditional numerical models. Artificial intelligence (AI)-based weather and ocean forecasting systems are becoming powerful tools that balance forecast performance with computational efficiency. However, the complex multiscale features in the ocean dynamical system make AI models still face many challenges in mesoscale eddy forecasting (especially regional modelling). Here, we develop LanTu, a regional eddy-resolving ocean forecasting system based on dynamics-enhanced deep learning. We incorporate cross-scale interactions into LanTu and construct multiscale physical constraint for optimising LanTu guided by knowledge of eddy dynamics in order to improve the forecasting skill of LanTu for mesoscale evolution. The results show that LanTu outperforms the existing advanced operational numerical ocean forecasting system (NOFS) and AI-based ocean forecasting system (AI-OFS) in temperature, salinity, sea level anomaly and current prediction, with a lead time of more than 10 days. Our study highlights that dynamics-enhanced deep learning (LanTu) can be a powerful paradigm for eddy-resolving ocean forecasting.",
+      "doi": "",
+      "comment": "22 pages, 6 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2511.18732v2",
+      "title": "OceanForecastBench: A Benchmark Dataset for Data-Driven Global Ocean Forecasting",
+      "arxiv_url": "http://arxiv.org/abs/2511.18732v2",
+      "authors": [
+        "Haoming Jia",
+        "Yi Han",
+        "Xiang Wang",
+        "Huizan Wang",
+        "Wei Wu",
+        "Jianming Zheng",
+        "Peikun Xiao"
+      ],
+      "published": "2025-11-24",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "abstract": "Global ocean forecasting aims to predict key ocean variables such as temperature, salinity, and currents, which is essential for understanding and describing oceanic phenomena. In recent years, data-driven deep learning-based ocean forecast models, such as XiHe, WenHai, LangYa and AI-GOMS, have demonstrated significant potential in capturing complex ocean dynamics and improving forecasting efficiency. Despite these advancements, the absence of open-source, standardized benchmarks has led to inconsistent data usage and evaluation methods. This gap hinders efficient model development, impedes fair performance comparison, and constrains interdisciplinary collaboration. To address this challenge, we propose OceanForecastBench, a benchmark offering three core contributions: (1) A high-quality global ocean reanalysis data over 28 years for model training, including 4 ocean variables across 23 depth levels and 4 sea surface variables. (2) A high-reliability satellite and in-situ observations for model evaluation, covering approximately 100 million locations in the global ocean. (3) An evaluation pipeline and a comprehensive benchmark with 6 typical baseline models, leveraging observations to evaluate model performance from multiple perspectives. OceanForecastBench represents the most comprehensive benchmarking framework currently available for data-driven ocean forecasting, offering an open-source platform for model development, evaluation, and comparison. The dataset and code are publicly available at: https://github.com/Ocean-Intelligent-Forecasting/OceanForecastBench.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2505.24429v2",
+      "title": "Deep Learning Weather Models for Subregional Ocean Forecasting: A Case Study on the Canary Current Upwelling System",
+      "arxiv_url": "http://arxiv.org/abs/2505.24429v2",
+      "authors": [
+        "Giovanny A. Cuervo-Londoño",
+        "Javier Sánchez",
+        "Ángel Rodríguez-Santana"
+      ],
+      "published": "2025-05-30",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Oceanographic forecasting impacts various sectors of society by supporting environmental conservation and economic activities. Based on global circulation models, traditional forecasting methods are computationally expensive and slow, limiting their ability to provide rapid forecasts. Recent advances in deep learning offer faster and more accurate predictions, although these data-driven models are often trained with global data from numerical simulations, which may not reflect reality. The emergence of such models presents great potential for improving ocean prediction at a subregional domain. However, their ability to predict fine-scale ocean processes, like mesoscale structures, remains largely unknown. This work aims to adapt a graph neural network initially developed for global weather forecasting to improve subregional ocean prediction, specifically focusing on the Canary Current upwelling system. The model is trained with satellite data and compared to state-of-the-art physical ocean models to assess its performance in capturing ocean dynamics. Our results show that the deep learning model surpasses traditional methods in precision despite some challenges in upwelling areas. It demonstrated superior performance in reducing RMSE errors compared to ConvLSTM and the GLORYS reanalysis, particularly in regions with complex oceanic dynamics such as Cape Ghir, Cape Bojador, and Cape Blanc. The model achieved improvements of up to 26.5% relative to ConvLSTM and error reductions of up to 76% in 5-day forecasts compared to the GLORYS reanalysis at these critical locations, highlighting its enhanced capability to capture spatial variability and improve predictive accuracy in complex areas. These findings suggest the viability of adapting meteorological data-driven models for improving subregional medium-term ocean forecasting.",
+      "doi": "",
+      "comment": "28 pages, 8 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2512.22152v1",
+      "title": "Neural ocean forecasting from sparse satellite-derived observations: a case-study for SSH dynamics and altimetry data",
+      "arxiv_url": "http://arxiv.org/abs/2512.22152v1",
+      "authors": [
+        "Daria Botvynko",
+        "Pierre Haslée",
+        "Lucile Gaultier",
+        "Bertrand Chapron",
+        "Clement de Boyer Montégut",
+        "Anass El Aouni",
+        "Julien Le Sommer",
+        "Ronan Fablet"
+      ],
+      "published": "2025-12-15",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "We present an end-to-end deep learning framework for short-term forecasting of global sea surface dynamics based on sparse satellite altimetry data. Building on two state-of-the-art architectures: U-Net and 4DVarNet, originally developed for image segmentation and spatiotemporal interpolation respectively, we adapt the models to forecast the sea level anomaly and sea surface currents over a 7-day horizon using sequences of sparse nadir altimeters observations. The model is trained on data from the GLORYS12 operational ocean reanalysis, with synthetic nadir sampling patterns applied to simulate realistic observational coverage. The forecasting task is formulated as a sequence-to-sequence mapping, with the input comprising partial sea level anomaly (SLA) snapshots and the target being the corresponding future full-field SLA maps. We evaluate model performance using (i) normalized root mean squared error (nRMSE), (ii) averaged effective resolution, (iii) percentage of correctly predicted velocities magnitudes and angles, and benchmark results against the operational Mercator Ocean forecast product. Results show that end-to-end neural forecasts outperform the baseline across all lead times, with particularly notable improvements in high variability regions. Our framework is developed within the OceanBench benchmarking initiative, promoting reproducibility and standardized evaluation in ocean machine learning. These results demonstrate the feasibility and potential of end-to-end neural forecasting models for operational oceanography, even in data-sparse conditions.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2506.23900v1",
+      "title": "Accurate Mediterranean Sea forecasting via graph-based deep learning",
+      "arxiv_url": "http://arxiv.org/abs/2506.23900v1",
+      "authors": [
+        "Daniel Holmberg",
+        "Emanuela Clementi",
+        "Italo Epicoco",
+        "Teemu Roos"
+      ],
+      "published": "2025-06-30",
+      "year": 2025,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "Accurate ocean forecasting systems are essential for understanding marine dynamics, which play a crucial role in sectors such as shipping, aquaculture, environmental monitoring, and coastal risk management. Traditional numerical solvers, while effective, are computationally expensive and time-consuming. Recent advancements in machine learning have revolutionized weather forecasting, offering fast and energy-efficient alternatives. Building on these advancements, we introduce SeaCast, a neural network designed for high-resolution regional ocean forecasting. SeaCast employs a graph-based framework to effectively handle the complex geometry of ocean grids and integrates external forcing data tailored to the regional ocean context. Our approach is validated through experiments at a high horizontal resolution using the operational numerical forecasting system of the Mediterranean Sea, along with both numerical and data-driven atmospheric forcings. Results demonstrate that SeaCast consistently outperforms the operational model in forecast skill, marking a significant advancement in regional ocean prediction.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2603.06153v1",
+      "title": "Ensemble Graph Neural Networks for Probabilistic Sea Surface Temperature Forecasting via Input Perturbations",
+      "arxiv_url": "http://arxiv.org/abs/2603.06153v1",
+      "authors": [
+        "Alejandro J. González-Santana",
+        "Giovanny A. Cuervo-Londoño",
+        "Javier Sánchez"
+      ],
+      "published": "2026-03-06",
+      "year": 2026,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.geo-ph"
+      ],
+      "abstract": "Accurate regional ocean forecasting requires models that are both computationally efficient and capable of representing predictive uncertainty. This work investigates ensemble learning strategies for sea surface temperature (SST) forecasting using Graph Neural Networks (GNNs), with a focus on how input perturbation design affects forecast skill and uncertainty representation. We adapt a GNN architecture to the Canary Islands region in the North Atlantic and implement a homogeneous ensemble approach inspired by bagging, where diversity is introduced during inference by perturbing initial ocean states rather than retraining multiple models. Several noise-based ensemble generation strategies are evaluated, including Gaussian noise, Perlin noise, and fractal Perlin noise, with systematic variation of noise intensity and spatial structure. Ensemble forecasts are assessed over a 15-day horizon using deterministic metrics (RMSE and bias) and probabilistic metrics, including the Continuous Ranked Probability Score (CRPS) and the Spread-skill ratio. Results show that, while deterministic skill remains comparable to the single-model forecast, the type and structure of input perturbations strongly influence uncertainty representation, particularly at longer lead times. Ensembles generated with spatially coherent perturbations, such as low-resolution Perlin noise, achieve better calibration and lower CRPS than purely random Gaussian perturbations. These findings highlight the critical role of noise structure and scale in ensemble GNN design and demonstrate that carefully constructed input perturbations can yield well-calibrated probabilistic forecasts without additional training cost, supporting the feasibility of ensemble GNNs for operational regional ocean prediction.",
+      "doi": "",
+      "comment": "20 pages, 14 figures, 6 tables",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2308.03152v2",
+      "title": "AI-GOMS: Large AI-Driven Global Ocean Modeling System",
+      "arxiv_url": "http://arxiv.org/abs/2308.03152v2",
+      "authors": [
+        "Wei Xiong",
+        "Yanfei Xiang",
+        "Hao Wu",
+        "Shuyi Zhou",
+        "Yuze Sun",
+        "Muyuan Ma",
+        "Xiaomeng Huang"
+      ],
+      "published": "2023-08-06",
+      "year": 2023,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Ocean modeling is a powerful tool for simulating the physical, chemical, and biological processes of the ocean, which is the foundation for marine science research and operational oceanography. Modern numerical ocean modeling mainly consists of governing equations and numerical algorithms. Nonlinear instability, computational expense, low reusability efficiency and high coupling costs have gradually become the main bottlenecks for the further development of numerical ocean modeling. Recently, artificial intelligence-based modeling in scientific computing has shown revolutionary potential for digital twins and scientific simulations, but the bottlenecks of numerical ocean modeling have not been further solved. Here, we present AI-GOMS, a large AI-driven global ocean modeling system, for accurate and efficient global ocean daily prediction. AI-GOMS consists of a backbone model with the Fourier-based Masked Autoencoder structure for basic ocean variable prediction and lightweight fine-tuning models incorporating regional downscaling, wave decoding, and biochemistry coupling modules. AI-GOMS has achieved the best performance in 30 days of prediction for the global ocean basic variables with 15 depth layers at 1/4° spatial resolution. Beyond the good performance in statistical metrics, AI-GOMS realizes the simulation of mesoscale eddies in the Kuroshio region at 1/12° spatial resolution and ocean stratification in the tropical Pacific Ocean. AI-GOMS provides a new backbone-downstream paradigm for Earth system modeling, which makes the system transferable, scalable and reusable.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2511.17427v1",
+      "title": "Towards fully differentiable neural ocean model with Veros",
+      "arxiv_url": "http://arxiv.org/abs/2511.17427v1",
+      "authors": [
+        "Etienne Meunier",
+        "Said Ouala",
+        "Hugo Frezat",
+        "Julien Le Sommer",
+        "Ronan Fablet"
+      ],
+      "published": "2025-11-21",
+      "year": 2025,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "We present a differentiable extension of the VEROS ocean model, enabling automatic differentiation through its dynamical core. We describe the key modifications required to make the model fully compatible with JAX autodifferentiation framework and evaluate the numerical consistency of the resulting implementation. Two illustrative applications are then demonstrated: (i) the correction of an initial ocean state through gradient-based optimization, and (ii) the calibration of unknown physical parameters directly from model observations. These examples highlight how differentiable programming can facilitate end-to-end learning and parameter tuning in ocean modeling. Our implementation is available online.",
+      "doi": "",
+      "comment": "Accepted to Differentiable Systems and Scientific Machine Learning (workshop, EurIPS 2025)",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2009.01554v1",
+      "title": "Automated identification of metamorphic test scenarios for an ocean-modeling application",
+      "arxiv_url": "http://arxiv.org/abs/2009.01554v1",
+      "authors": [
+        "Dilip J. Hiremath",
+        "Martin Claus",
+        "Wilhelm Hasselbring",
+        "Willi Rath"
+      ],
+      "published": "2020-09-03",
+      "year": 2020,
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "abstract": "Metamorphic testing seeks to validate software in the absence of test oracles. Our application domain is ocean modeling, where test oracles often do not exist, but where symmetries of the simulated physical systems are known. In this short paper we present work in progress for automated generation of metamorphic test scenarios using machine learning. Metamorphic testing may be expressed as f(g(X))=h(f(X)) with f being the application under test, with input data X, and with the metamorphic relation (g, h). Automatically generated metamorphic relations can be used for constructing regression tests, and for comparing different versions of the same software application. Here, we restrict to h being the identity map. Then, the task of constructing tests means finding different g which we tackle using machine learning algorithms. These algorithms typically minimize a cost function. As one possible g is already known to be the identity map, for finding a second possible g, we construct the cost function to minimize for g being a metamorphic relation and to penalize for g being the identity map. After identifying the first metamorphic relation, the procedure is repeated with a cost function rewarding g that are orthogonal to previously found metamorphic relations. For experimental evaluation, two implementations of an ocean-modeling application will be subjected to the proposed method with the objective of presenting the use of metamorphic relations to test the implementations of the applications.",
+      "doi": "10.1109/AITEST49225.2020.00016",
+      "comment": "Shot paper:2 pages, 2020 IEEE International Conference On Artificial Intelligence Testing (AITest)",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2512.11525v1",
+      "title": "NeuralOGCM: Differentiable Ocean Modeling with Learnable Physics",
+      "arxiv_url": "http://arxiv.org/abs/2512.11525v1",
+      "authors": [
+        "Hao Wu",
+        "Yuan Gao",
+        "Fan Xu",
+        "Fan Zhang",
+        "Guangliang Liu",
+        "Yuxuan Liang",
+        "Xiaomeng Huang"
+      ],
+      "published": "2025-12-12",
+      "year": 2025,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "High-precision scientific simulation faces a long-standing trade-off between computational efficiency and physical fidelity. To address this challenge, we propose NeuralOGCM, an ocean modeling framework that fuses differentiable programming with deep learning. At the core of NeuralOGCM is a fully differentiable dynamical solver, which leverages physics knowledge as its core inductive bias. The learnable physics integration captures large-scale, deterministic physical evolution, and transforms key physical parameters (e.g., diffusion coefficients) into learnable parameters, enabling the model to autonomously optimize its physical core via end-to-end training. Concurrently, a deep neural network learns to correct for subgrid-scale processes and discretization errors not captured by the physics model. Both components work in synergy, with their outputs integrated by a unified ODE solver. Experiments demonstrate that NeuralOGCM maintains long-term stability and physical consistency, significantly outperforming traditional numerical models in speed and pure AI baselines in accuracy. Our work paves a new path for building fast, stable, and physically-plausible models for scientific computing.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2307.00734v1",
+      "title": "On the choice of training data for machine learning of geostrophic mesoscale turbulence",
+      "arxiv_url": "http://arxiv.org/abs/2307.00734v1",
+      "authors": [
+        "F. E. Yan",
+        "J. Mak",
+        "Y. Wang"
+      ],
+      "published": "2023-07-03",
+      "year": 2023,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "abstract": "'Data' plays a central role in data-driven methods, but is not often the subject of focus in investigations of machine learning algorithms as applied to Earth System Modeling related problems. Here we consider the case of eddy-mean interaction in rotating stratified turbulence in the presence of lateral boundaries, a problem of relevance to ocean modeling, where the eddy fluxes contain dynamically inert rotational components that are expected to contaminate the learning process. An often utilized choice in the literature is to learn from the divergence of the eddy fluxes. Here we provide theoretical arguments and numerical evidence that learning from the eddy fluxes with the rotational component appropriately filtered out results in models with comparable or better skill, but substantially improved robustness. If we simply want a data-driven model to have predictive skill then the choice of data choice and/or quality may not be critical, but we argue it is highly desirable and perhaps even necessary if we want to leverage data-driven methods to aid in discovering unknown or hidden physical processes within the data itself.",
+      "doi": "",
+      "comment": "23 pages, 8 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2601.12775v1",
+      "title": "Eddy-Resolving Global Ocean Forecasting with Multi-Scale Graph Neural Networks",
+      "arxiv_url": "http://arxiv.org/abs/2601.12775v1",
+      "authors": [
+        "Yuta Hirabayashi",
+        "Daisuke Matusoka",
+        "Konobu Kimura"
+      ],
+      "published": "2026-01-19",
+      "year": 2026,
+      "categories": [
+        "cs.LG"
+      ],
+      "abstract": "Research on data-driven ocean models has progressed rapidly in recent years; however, the application of these models to global eddy-resolving ocean forecasting remains limited. The accurate representation of ocean dynamics across a wide range of spatial scales remains a major challenge in such applications. This study proposes a multi-scale graph neural network-based ocean model for 10-day global forecasting that improves short-term prediction skill and enhances the representation of multi-scale ocean variability. The model employs an encoder-processor-decoder architecture and uses two spherical meshes with different resolutions to better capture the multi-scale nature of ocean dynamics. In addition, the model incorporates surface atmospheric variables along with ocean state variables as node inputs to improve short-term prediction accuracy by representing atmospheric forcing. Evaluation using surface kinetic energy spectra and case studies shows that the model accurately represents a broad range of spatial scales, while root mean square error comparisons demonstrate improved skill in short-term predictions. These results indicate that the proposed model delivers more accurate short-term forecasts and improved representation of multi-scale ocean dynamics, thereby highlighting its potential to advance data-driven, eddy-resolving global ocean forecasting.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2202.08956v2",
+      "title": "GNN-Surrogate: A Hierarchical and Adaptive Graph Neural Network for Parameter Space Exploration of Unstructured-Mesh Ocean Simulations",
+      "arxiv_url": "http://arxiv.org/abs/2202.08956v2",
+      "authors": [
+        "Neng Shi",
+        "Jiayi Xu",
+        "Skylar W. Wurster",
+        "Hanqi Guo",
+        "Jonathan Woodring",
+        "Luke P. Van Roekel",
+        "Han-Wei Shen"
+      ],
+      "published": "2022-02-18",
+      "year": 2022,
+      "categories": [
+        "physics.ao-ph",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "abstract": "We propose GNN-Surrogate, a graph neural network-based surrogate model to explore the parameter space of ocean climate simulations. Parameter space exploration is important for domain scientists to understand the influence of input parameters (e.g., wind stress) on the simulation output (e.g., temperature). The exploration requires scientists to exhaust the complicated parameter space by running a batch of computationally expensive simulations. Our approach improves the efficiency of parameter space exploration with a surrogate model that predicts the simulation outputs accurately and efficiently. Specifically, GNN-Surrogate predicts the output field with given simulation parameters so scientists can explore the simulation parameter space with visualizations from user-specified visual mappings. Moreover, our graph-based techniques are designed for unstructured meshes, making the exploration of simulation outputs on irregular grids efficient. For efficient training, we generate hierarchical graphs and use adaptive resolutions. We give quantitative and qualitative evaluations on the MPAS-Ocean simulation to demonstrate the effectiveness and efficiency of GNN-Surrogate. Source code is publicly available at https://github.com/trainsn/GNN-Surrogate.",
+      "doi": "",
+      "comment": "Accepted by TVCG Special Issue on the 2022 IEEE Pacific Visualization Symposium (PacificVis)",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2107.09483v1",
+      "title": "Significant Wave Height Prediction based on Wavelet Graph Neural Network",
+      "arxiv_url": "http://arxiv.org/abs/2107.09483v1",
+      "authors": [
+        "Delong Chen",
+        "Fan Liu",
+        "Zheqi Zhang",
+        "Xiaomin Lu",
+        "Zewen Li"
+      ],
+      "published": "2021-07-20",
+      "year": 2021,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Computational intelligence-based ocean characteristics forecasting applications, such as Significant Wave Height (SWH) prediction, are crucial for avoiding social and economic loss in coastal cities. Compared to the traditional empirical-based or numerical-based forecasting models, \"soft computing\" approaches, including machine learning and deep learning models, have shown numerous success in recent years. In this paper, we focus on enabling the deep learning model to learn both short-term and long-term spatial-temporal dependencies for SWH prediction. A Wavelet Graph Neural Network (WGNN) approach is proposed to integrate the advantages of wavelet transform and graph neural network. Several parallel graph neural networks are separately trained on wavelet decomposed data, and the reconstruction of each model's prediction forms the final SWH prediction. Experimental results show that the proposed WGNN approach outperforms other models, including the numerical models, the machine learning models, and several deep learning models.",
+      "doi": "",
+      "comment": "Accepted by 2021 4th International Conference on Big Data and Artificial Intelligence (BDAI). Best presentation winner",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2410.11807v2",
+      "title": "Regional Ocean Forecasting with Hierarchical Graph Neural Networks",
+      "arxiv_url": "http://arxiv.org/abs/2410.11807v2",
+      "authors": [
+        "Daniel Holmberg",
+        "Emanuela Clementi",
+        "Teemu Roos"
+      ],
+      "published": "2024-10-15",
+      "year": 2024,
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG"
+      ],
+      "abstract": "Accurate ocean forecasting systems are vital for understanding marine dynamics, which play a crucial role in environmental management and climate adaptation strategies. Traditional numerical solvers, while effective, are computationally expensive and time-consuming. Recent advancements in machine learning have revolutionized weather forecasting, offering fast and energy-efficient alternatives. Building on these advancements, we introduce SeaCast, a neural network designed for high-resolution, medium-range ocean forecasting. SeaCast employs a graph-based framework to effectively handle the complex geometry of ocean grids and integrates external forcing data tailored to the regional ocean context. Our approach is validated through experiments at a high spatial resolution using the operational numerical model of the Mediterranean Sea provided by the Copernicus Marine Service, along with both numerical and data-driven atmospheric forcings.",
+      "doi": "",
+      "comment": "28 pages, 35 figures. Accepted to the Tackling Climate Change with Machine Learning workshop at NeurIPS 2024",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2304.05872v2",
+      "title": "Learning to Communicate and Collaborate in a Competitive Multi-Agent Setup to Clean the Ocean from Macroplastics",
+      "arxiv_url": "http://arxiv.org/abs/2304.05872v2",
+      "authors": [
+        "Philipp Dominic Siedler"
+      ],
+      "published": "2023-04-12",
+      "year": 2023,
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "abstract": "Finding a balance between collaboration and competition is crucial for artificial agents in many real-world applications. We investigate this using a Multi-Agent Reinforcement Learning (MARL) setup on the back of a high-impact problem. The accumulation and yearly growth of plastic in the ocean cause irreparable damage to many aspects of oceanic health and the marina system. To prevent further damage, we need to find ways to reduce macroplastics from known plastic patches in the ocean. Here we propose a Graph Neural Network (GNN) based communication mechanism that increases the agents' observation space. In our custom environment, agents control a plastic collecting vessel. The communication mechanism enables agents to develop a communication protocol using a binary signal. While the goal of the agent collective is to clean up as much as possible, agents are rewarded for the individual amount of macroplastics collected. Hence agents have to learn to communicate effectively while maintaining high individual performance. We compare our proposed communication mechanism with a multi-agent baseline without the ability to communicate. Results show communication enables collaboration and increases collective performance significantly. This means agents have learned the importance of communication and found a balance between collaboration and competition.",
+      "doi": "",
+      "comment": "Tackling Climate Change with Machine Learning Workshop at the 11th International Conference on Learning Representations (ICLR 2023)",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2512.11545v1",
+      "title": "Graph Embedding with Mel-spectrograms for Underwater Acoustic Target Recognition",
+      "arxiv_url": "http://arxiv.org/abs/2512.11545v1",
+      "authors": [
+        "Sheng Feng",
+        "Shuqing Ma",
+        "Xiaoqian Zhu"
+      ],
+      "published": "2025-12-12",
+      "year": 2025,
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "abstract": "Underwater acoustic target recognition (UATR) is extremely challenging due to the complexity of ship-radiated noise and the variability of ocean environments. Although deep learning (DL) approaches have achieved promising results, most existing models implicitly assume that underwater acoustic data lie in a Euclidean space. This assumption, however, is unsuitable for the inherently complex topology of underwater acoustic signals, which exhibit non-stationary, non-Gaussian, and nonlinear characteristics. To overcome this limitation, this paper proposes the UATR-GTransformer, a non-Euclidean DL model that integrates Transformer architectures with graph neural networks (GNNs). The model comprises three key components: a Mel patchify block, a GTransformer block, and a classification head. The Mel patchify block partitions the Mel-spectrogram into overlapping patches, while the GTransformer block employs a Transformer Encoder to capture mutual information between split patches to generate Mel-graph embeddings. Subsequently, a GNN enhances these embeddings by modeling local neighborhood relationships, and a feed-forward network (FFN) further performs feature transformation. Experiments results based on two widely used benchmark datasets demonstrate that the UATR-GTransformer achieves performance competitive with state-of-the-art methods. In addition, interpretability analysis reveals that the proposed model effectively extracts rich frequency-domain information, highlighting its potential for applications in ocean engineering.",
+      "doi": "10.1109/JOE.2025.3619314",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2105.12903v1",
+      "title": "Neural Enhanced Belief Propagation for Cooperative Localization",
+      "arxiv_url": "http://arxiv.org/abs/2105.12903v1",
+      "authors": [
+        "Mingchao Liang",
+        "Florian Meyer"
+      ],
+      "published": "2021-05-27",
+      "year": 2021,
+      "categories": [
+        "cs.LG",
+        "cs.MA",
+        "cs.RO",
+        "eess.SP"
+      ],
+      "abstract": "Location-aware networks will introduce innovative services and applications for modern convenience, applied ocean sciences, and public safety. In this paper, we establish a hybrid method for model-based and data-driven inference. We consider a cooperative localization (CL) scenario where the mobile agents in a wireless network aim to localize themselves by performing pairwise observations with other agents and by exchanging location information. A traditional method for distributed CL in large agent networks is belief propagation (BP) which is completely model-based and is known to suffer from providing inconsistent (overconfident) estimates. The proposed approach addresses these limitations by complementing BP with learned information provided by a graph neural network (GNN). We demonstrate numerically that our method can improve estimation accuracy and avoid overconfident beliefs, while its computational complexity remains comparable to BP. Notably, more consistent beliefs are obtained by not explicitly addressing overconfidence in the loss function used for training of the GNN.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2312.05068v1",
+      "title": "Application of deep learning to the estimation of normalization coefficients in diffusion-based covariance models",
+      "arxiv_url": "http://arxiv.org/abs/2312.05068v1",
+      "authors": [
+        "Folke K Skrunes",
+        "Mayeul Destouches",
+        "Anthony Weaver",
+        "Guillaume Coulaud",
+        "Olivier Goux",
+        "Corentin Lapeyre"
+      ],
+      "published": "2023-12-08",
+      "year": 2023,
+      "categories": [
+        "physics.data-an"
+      ],
+      "abstract": "Variational data assimilation in ocean models depends on the ability to model general correlation operators in the presence of coastlines. Grid-point filters based on diffusion operators are widely used for this purpose, but come with a computational bottleneck - the costly estimation of normalization factors for every model grid point. In this paper, we show that a simple convolutional neural network can effectively learn these normalization factors with better accuracy than the current operational methods. Our network is tested with a two-dimensional diffusion operator from the NEMOVAR ocean data assimilation system, applied to a global ocean grid with approximately one degree horizontal resolution. The network is trained on exact normalization factors estimated by a brute-force method. Knowing that convolutional networks can only model translation-equivariant functions, we ensure that the normalization estimation problem is indeed translation-equivariant. Specifically, we show how the number of inputs of this problem can be reduced while preserving translation equivariance. Adding the distance to the coastline as an input channel is found to improve the performance of the network around coastlines. Extensions to three-dimensional diffusion and to higher horizontal resolutions are discussed. Removing the computational bottleneck associated with normalization opens the way to using adaptive correlation models for operational ocean data assimilation. The code for this work is publicly available at https://github.com/FolkeKS/DL-normalization/tree/core-features",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2211.05904v1",
+      "title": "4DVarNet-SSH: end-to-end learning of variational interpolation schemes for nadir and wide-swath satellite altimetry",
+      "arxiv_url": "http://arxiv.org/abs/2211.05904v1",
+      "authors": [
+        "Maxime Beauchamp",
+        "Quentin Febvre",
+        "Hugo Georgentum",
+        "Ronan Fablet"
+      ],
+      "published": "2022-11-10",
+      "year": 2022,
+      "categories": [
+        "eess.IV"
+      ],
+      "abstract": "The reconstruction of sea surface currents from satellite altimeter data is a key challenge in spatial oceanography, especially with the upcoming wide-swath SWOT (Surface Ocean and Water Topography) altimeter mission. Operational systems however generally fail to retrieve mesoscale dynamics for horizontal scales below 100km and time-scale below 10 days. Here, we address this challenge through the 4DVarnet framework, an end-to-end neural scheme backed on a variational data assimilation formulation. We introduce a parametrization of the 4DVarNet scheme dedicated to the space-time interpolation of satellite altimeter data. Within an observing system simulation experiment (NATL60), we demonstrate the relevance of the proposed approach both for nadir and nadir+swot altimeter configurations for two contrasted case-study regions in terms of upper ocean dynamics. We report relative improvement with respect to the operational optimal interpolation between 30% and 60% in terms of reconstruction error. Interestingly, for the nadir+swot altimeter configuration, we reach resolved space-time scales below 70km and 7days. The code is open-source to enable reproductibility and future collaborative developments. Beyond its applicability to large-scale domains, we also address uncertainty quantification issues and generalization properties of the proposed learning setting. We discuss further future research avenues and extensions to other ocean data assimilation and space oceanography challenges.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2304.03832v1",
+      "title": "Deep learning of systematic sea ice model errors from data assimilation increments",
+      "arxiv_url": "http://arxiv.org/abs/2304.03832v1",
+      "authors": [
+        "William Gregory",
+        "Mitchell Bushuk",
+        "Alistair Adcroft",
+        "Yongfei Zhang",
+        "Laure Zanna"
+      ],
+      "published": "2023-04-07",
+      "year": 2023,
+      "categories": [
+        "physics.ao-ph"
+      ],
+      "abstract": "Data assimilation is often viewed as a framework for correcting short-term error growth in dynamical climate model forecasts. When viewed on the time scales of climate however, these short-term corrections, or analysis increments, can closely mirror the systematic bias patterns of the dynamical model. In this study, we use convolutional neural networks (CNNs) to learn a mapping from model state variables to analysis increments, in order to showcase the feasibility of a data-driven model parameterization which can predict state-dependent model errors. We undertake this problem using an ice-ocean data assimilation system within the Seamless system for Prediction and EArth system Research (SPEAR) model, developed at the Geophysical Fluid Dynamics Laboratory, which assimilates satellite observations of sea ice concentration every 5 days between 1982--2017. The CNN then takes inputs of data assimilation forecast states and tendencies, and makes predictions of the corresponding sea ice concentration increments. Specifically, the inputs are states and tendencies of sea ice concentration, sea-surface temperature, ice velocities, ice thickness, net shortwave radiation, ice-surface skin temperature, sea-surface salinity, as well as a land-sea mask. We find the CNN is able to make skillful predictions of the increments in both the Arctic and Antarctic and across all seasons, with skill that consistently exceeds that of a climatological increment prediction. This suggests that the CNN could be used to reduce sea ice biases in free-running SPEAR simulations, either as a sea ice parameterization or an online bias correction tool for numerical sea ice forecasts.",
+      "doi": "10.1029/2023MS003757",
+      "comment": "38 pages, 8 figures, 10 supplementary figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "2209.11371v3",
+      "title": "Ensemble Kalman Methods: A Mean Field Perspective",
+      "arxiv_url": "http://arxiv.org/abs/2209.11371v3",
+      "authors": [
+        "Edoardo Calvello",
+        "Sebastian Reich",
+        "Andrew M. Stuart"
+      ],
+      "published": "2022-09-23",
+      "year": 2022,
+      "categories": [
+        "math.OC",
+        "math.NA"
+      ],
+      "abstract": "Ensemble Kalman methods are widely used for state estimation in the geophysical sciences. Their success stems from the fact that they take an underlying (possibly noisy) dynamical system as a black box to provide a systematic, derivative-free methodology for incorporating noisy, partial and possibly indirect observations to update estimates of the state; furthermore the ensemble approach allows for sensitivities and uncertainties to be calculated. The methodology was introduced in 1994 in the context of ocean state estimation. Soon thereafter it was adopted by the numerical weather prediction community and is now a key component of the best weather prediction systems worldwide. Furthermore the methodology is starting to be widely adopted for numerous problems in the geophysical sciences and is being developed as the basis for general purpose derivative-free inversion methods that show great promise. Despite this empirical success, analysis of the accuracy of ensemble Kalman methods, in terms of their capabilities as both state estimators and quantifiers of uncertainty, is lagging. The purpose of this paper is to provide a unifying mean field based framework for the derivation and analysis of ensemble Kalman methods. Both state estimation and parameter estimation problems (inverse problems) are considered, and formulations in both discrete and continuous time are employed. For state estimation problems, both the control and filtering approaches are considered; analogously for parameter estimation problems, the optimization and Bayesian perspectives are both studied. The mean field perspective provides an elegant framework, suitable for analysis; furthermore, a variety of methods used in practice can be derived from mean field systems by using interacting particle system approximations. The approach taken also unifies a wide-ranging literature in the field and suggests open problems.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1204.3547v2",
+      "title": "Computer Model Calibration using the Ensemble Kalman Filter",
+      "arxiv_url": "http://arxiv.org/abs/1204.3547v2",
+      "authors": [
+        "Dave Higdon",
+        "Matt Pratola",
+        "James Gattiker",
+        "Earl Lawrence",
+        "Salman Habib",
+        "Katrin Heitmann",
+        "Steve Price",
+        "Charles Jackson",
+        "Michael Tobis"
+      ],
+      "published": "2012-04-16",
+      "year": 2012,
+      "categories": [
+        "stat.ME",
+        "stat.CO"
+      ],
+      "abstract": "The ensemble Kalman filter (EnKF) (Evensen, 2009) has proven effective in quantifying uncertainty in a number of challenging dynamic, state estimation, or data assimilation, problems such as weather forecasting and ocean modeling. In these problems a high-dimensional state parameter is successively updated based on recurring physical observations, with the aid of a computationally demanding forward model that prop- agates the state from one time step to the next. More recently, the EnKF has proven effective in history matching in the petroleum engineering community (Evensen, 2009; Oliver and Chen, 2010). Such applications typically involve estimating large numbers of parameters, describing an oil reservoir, using data from production history that accumulate over time. Such history matching problems are especially challenging examples of computer model calibration since they involve a large number of model parameters as well as a computationally demanding forward model. More generally, computer model calibration combines physical observations with a computational model - a computer model - to estimate unknown parameters in the computer model. This paper explores how the EnKF can be used in computer model calibration problems, comparing it to other more common approaches, considering applications in climate and cosmology.",
+      "doi": "",
+      "comment": "20 pages; 11 figures",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1108.0168v1",
+      "title": "Particle Kalman Filtering: A Nonlinear Bayesian Framework for Ensemble Kalman Filters",
+      "arxiv_url": "http://arxiv.org/abs/1108.0168v1",
+      "authors": [
+        "Ibrahim Hoteit",
+        "Xiaodong Luo",
+        "Dinh-Tuan Pham"
+      ],
+      "published": "2011-07-31",
+      "year": 2011,
+      "categories": [
+        "physics.data-an"
+      ],
+      "abstract": "This paper investigates an approximation scheme of the optimal nonlinear Bayesian filter based on the Gaussian mixture representation of the state probability distribution function. The resulting filter is similar to the particle filter, but is different from it in that, the standard weight-type correction in the particle filter is complemented by the Kalman-type correction with the associated covariance matrices in the Gaussian mixture. We show that this filter is an algorithm in between the Kalman filter and the particle filter, and therefore is referred to as the particle Kalman filter (PKF). In the PKF, the solution of a nonlinear filtering problem is expressed as the weighted average of an \"ensemble of Kalman filters\" operating in parallel. Running an ensemble of Kalman filters is, however, computationally prohibitive for realistic atmospheric and oceanic data assimilation problems. For this reason, we consider the construction of the PKF through an \"ensemble\" of ensemble Kalman filters (EnKFs) instead, and call the implementation the particle EnKF (PEnKF). We show that different types of the EnKFs can be considered as special cases of the PEnKF. Similar to the situation in the particle filter, we also introduce a re-sampling step to the PEnKF in order to reduce the risk of weights collapse and improve the performance of the filter. Numerical experiments with the strongly nonlinear Lorenz-96 model are presented and discussed.",
+      "doi": "10.1175/2011MWR3640.1",
+      "comment": "Accepted manuscript, to appear in Monthly Weather Review",
+      "source": "arxiv"
+    },
+    {
+      "arxiv_id": "1302.3876v2",
+      "title": "An Efficient Implementation of the Ensemble Kalman Filter Based on an Iterative Sherman-Morrison Formula",
+      "arxiv_url": "http://arxiv.org/abs/1302.3876v2",
+      "authors": [
+        "Elias D. Nino-Ruiz",
+        "Adrian Sandu",
+        "Jeffrey Anderson"
+      ],
+      "published": "2013-02-15",
+      "year": 2013,
+      "categories": [
+        "math.NA"
+      ],
+      "abstract": "We present a practical implementation of the ensemble Kalman (EnKF) filter based on an iterative Sherman-Morrison formula. The new direct method exploits the special structure of the ensemble-estimated error covariance matrices in order to efficiently solve the linear systems involved in the analysis step of the EnKF. The computational complexity of the proposed implementation is equivalent to that of the best EnKF implementations available in the literature when the number of observations is much larger than the number of ensemble members. Even when this conditions is not fulfilled, the proposed method is expected to perform well since it does not employ matrix decompositions. Computational experiments using the Lorenz 96 and the oceanic quasi-geostrophic models are performed in order to compare the proposed algorithm with EnKF implementations that use matrix decompositions. In terms of accuracy, the results of all implementations are similar. The proposed method is considerably faster than other EnKF variants, even when the number of observations is large relative to the number of ensemble members.",
+      "doi": "",
+      "comment": "",
+      "source": "arxiv"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2026-03-21T20:37:17.452850"
+  }
+}

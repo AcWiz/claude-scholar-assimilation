@@ -13,14 +13,14 @@
 ## 用户背景
 
 ### 学术背景
-- **学历**: 计算机科学 PhD
-- **研究方向**: AI/ML + NLP + CV
+- **学历**: PhD
+- **研究方向**: AI + 海洋数据同化 + 海洋预报 + 数据同化
 - **投稿目标**:
-  - ML 顶会: NeurIPS, ICML, ICLR
-  - NLP 顶会: ACL, EMNLP, NAACL
-  - CV 顶会: CVPR, ICCV, ECCV
-- **写作工具**: LaTeX + Overleaf + Word
-- **关注点**: 学术写作质量、逻辑连贯性、自然表达、去 AI 痕迹
+  - AI 顶会: NeurIPS, ICML, ICLR
+  - 海洋/地学期刊: Nature, Science, GRL, JGR, Ocean Modelling
+  - 交叉/方法论: KDD, ACL (NLP+Science), EMNLP
+- **写作工具**: LaTeX + Overleaf
+- **关注点**: 学术写作质量、逻辑连贯性、自然表达、去 AI 痕迹、跨学科研究方法
 
 ### 技术栈偏好
 
